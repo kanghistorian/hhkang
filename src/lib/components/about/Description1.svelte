@@ -1,7 +1,5 @@
 <script lang="ts">
-	// import profile from '$lib/media/p.webp';
 	const profile: string = 'https://ik.imagekit.io/easton/hhkang/images/Profile1.jpg';
-	import TextSlideX from '../effects/TextSlideX.svelte';
 
 	let {
 		overlayColor
@@ -11,81 +9,61 @@
 </script>
 
 <div
-	class="w-full h-full transition-colors duration-1000 ease-out flex items-center justify-center"
+	class="flex min-h-screen w-full items-center justify-center py-28 transition-colors duration-1000 ease-out"
 	style:color={overlayColor}
 >
-	<div class="w-[70vw] h-[90vh] overflow-hidden pt-20">
-		<div class="w-full h-12/12 flex">
-			<div
-				class="w-[50%] h-full text-base 2xl:text-[1.2rem] flex items-start font-crimson pr-2 prose prose-light"
-			>
-				<div>
-					Professor H. H. Kang grew up in Guatemala City, Guatemala. After completing secondary
-					school there, he studied at Emory University and Harvard University, where he earned his
-					Ph.D. in History and East Asian Languages. He joined the WashU faculty in 2021 as
-					<a href="https://ealc.wustl.edu/" target="_blank"
-						>Assistant Professor of East Asian Language and Cultures
-					</a>, from Johns Hopkins University where he held a D. Kim Foundation Postdoctoral
-					Fellowship in the Department of the History of Science and Technology in 2020–21.
-					<br /><br />
+	<div class="grid w-[82vw] grid-cols-[minmax(0,3fr)_minmax(18rem,2fr)] gap-12 2xl:w-[76vw]">
+		<div class="max-w-none font-crimson text-base leading-relaxed 2xl:text-[1.15rem]">
+			<p>
+				Hyeok Hweon Kang is a historian of early modern Korea and East Asia and Assistant Professor
+				of East Asian Languages and Cultures at Washington University in St. Louis. His research
+				brings together social and intellectual history, the history of science and technology,
+				material culture, and digital humanities.
+			</p>
 
-					Kang’s first book, under contract with the University of Chicago Press, examines how
-					artisans and “ingeniators” (leaders of artisans) shaped a vibrant culture of material
-					design and knowledge-making in partnership with the Chosŏn Korean (1392–1910) state. His
-					research on this subject has received international awards including the 2021
-					International Committee on the History of Technology Turriano Prize and the 2021
-					International Council of Asia Scholars Book Prize (English—Best Dissertation in the
-					Humanities).
+			<p class="mt-4 border-l border-current pl-4 text-[0.95em]">
+				Affiliate Faculty, Comparative Literature and Thought and Department of History; Head of the
+				Korean Section.
+			</p>
 
-					<br /><br />
-					Kang is in the early stages of writing two other books on Korean science.
-					<i>Working Wisdom</i>
-					examines eighteenth-century army men, rustic scholars, and noblewomen who contributed to a practical
-					turn in Korean learning, by translating foreign knowledge into “everyday technologies” ranging
-					from cooking and husbandry to medicine and magic.
-					<i>Mr. Five Continents</i> centers Yi Kyugyŏng (1788–1856), a rustic bibliophile whose
-					works were written under his style name “Five Continents,” embodying his ambition to
-					master global science and technology from his provincial study on the eve of high
-					imperialism.
+			<p class="mt-6">
+				His first book, <i>By Virtue of Craft: Sciences of Making in Chosŏn Korea</i> (University of Chicago
+				Press, August 2027), recasts the relationship between technical knowledge and statecraft in Korean
+				history. Combining archival research with material analysis and experimental reconstruction, it
+				examines how artisans and experts recorded and theorized their knowledge of making. The book argues
+				that these “sciences of making” took shape through changing political and moral commitments to
+				useful knowledge and good government.
+			</p>
 
-					<br /><br />
-					<!-- Kang maintains wide-ranging research and teaching interests in early modern science and technology, -->
-					<!-- material culture studies, digital humanities, and global history. His works have appeared in -->
-					<!-- <a -->
-					<!-- 	href="https://www.journals.uchicago.edu/doi/abs/10.1086/718283?journalCode=isis" -->
-					<!-- 	target="_blank">Isis</a -->
-					<!-- >, -->
-					<!-- <a -->
-					<!-- 	href="https://www.tandfonline.com/doi/full/10.1080/07341512.2022.2153206" -->
-					<!-- 	target="_blank">History and Technology</a -->
-					<!-- >, -->
-					<!-- <a href="https://muse.jhu.edu/pub/5/article/957972/pdf" target="_blank" -->
-					<!-- 	>Journal of World History</a -->
-					<!-- >, -->
-					<!-- <a href="https://culturalanalytics.org/article/id/1299/" target="_blank" -->
-					<!-- 	>Journal of Cultural Analytics</a -->
-					<!-- >, and -->
-					<!-- <a -->
-					<!-- 	href="https://read.dukeupress.edu/journal-of-asian-studies/article-abstract/83/1/116/384189/Kingpins-at-CourtContraband-Diplomacy-between?redirectedFrom=fulltext" -->
-					<!-- 	target="_blank">Journal of Asian Studies</a -->
-					<!-- > -->
-					<!-- , among others. -->
-					<!---->
-					<!-- <br /><br /> -->
-					<!-- Kang was an -->
-					<!-- <a href="https://www.acls.org/" target="_blank" -->
-					<!-- 	>American Council of Learned Societies Fellow -->
-					<!-- </a> -->
-					<!-- in 2023–24. He is currently serving as co-chair of the Forum for the History of Science in Asia -->
-					<!-- at the -->
-					<!-- <a href="https://hssonline.org/" target="_blank">History of Science Society</a>. -->
-					<!-- <a href="https://ealc.wustl.edu/" target="_blank">East Asian Languages and Cultures</a> -->
-				</div>
-			</div>
+			<p class="mt-6">
+				Kang is currently working on two new book projects. <i>The Practical Age</i> examines how
+				practical knowledge and expertise acquired new moral and intellectual authority in
+				eighteenth-century Korea within a broader global turn toward usefulness.
+				<i>Mr. Five Continents</i> is an intellectual biography of the encyclopedist Yi Kyugyŏng (1788–1856),
+				exploring his efforts to master global knowledge of geography, technology, and the natural world
+				from his study in provincial Korea.
+			</p>
 
-			<figure class="w-[50%] h-full pr-0">
-				<img src={profile} alt="Saltpeter" class="object-cover h-full float-right" />
-			</figure>
+			<p class="mt-6">
+				Raised in Guatemala City, Kang earned his BA at Emory University and his PhD in History and
+				East Asian Languages at Harvard University. Before joining WashU in 2021, he held a D. Kim
+				Foundation Postdoctoral Fellowship in the Department of the History of Science and
+				Technology at Johns Hopkins University.
+			</p>
+
+			<p class="mt-8 border-t border-current pt-6">
+				Kang’s research received the 2021 Turriano Prize and the 2021 ICAS prize for the best
+				humanities dissertation in English. He held an
+				<a href="https://www.acls.org/" target="_blank"
+					>American Council of Learned Societies Fellowship</a
+				>
+				in 2023–24 and serves as co-chair of the History of Science Society’s Forum for the History of
+				Science in Asia.
+			</p>
 		</div>
+
+		<figure class="min-h-[32rem] overflow-hidden self-stretch">
+			<img src={profile} alt="Hyeok Hweon Kang" class="h-full w-full object-cover object-center" />
+		</figure>
 	</div>
 </div>

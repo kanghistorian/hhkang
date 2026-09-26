@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Logo from '$lib/components/overlay/Logo.svelte';
 	import Tabs from '$lib/components/overlay/Tabs.svelte';
+	import gun from '$lib/media/about-gun.webp';
+	import XZLoop from '$lib/media/XZ Loop.mp4';
 
 	let {
 		textColor,
@@ -14,69 +16,104 @@
 <Logo overlayColor={textColor} sticky={false} />
 <Tabs overlayColor={textColor} {backgroundColor} />
 
-<div
-	class="min-h-screen w-full flex flex-col font-crimson
-        space-y-8 px-8 pb-12 pt-32 prose prose-light"
-	style:background-color={backgroundColor}
-	style:color={textColor}
->
-	<div class="text-md">
-		<!-- <a href="https://ealc.wustl.edu/" target="_blank"> East Asian Languages and Cultures</a>. -->
-		Professor H. H. Kang grew up in Guatemala City, Guatemala. After completing secondary school there,
-		he studied at Emory University and Harvard University, where he earned his Ph.D. in History and East
-		Asian Languages. He joined the WashU faculty in 2021 as
-		<a href="https://ealc.wustl.edu/" target="_blank"
-			>Assistant Professor of East Asian Language and Cultures
-		</a>, from Johns Hopkins University where he held a D. Kim Foundation Postdoctoral Fellowship in
-		the Department of the History of Science and Technology in 2020–21.
-	</div>
+<main class="w-full overflow-x-hidden font-crimson" style:background-color={backgroundColor}>
+	<section
+		class="prose prose-light min-h-screen max-w-none space-y-6 px-8 pb-16 pt-32 text-base md:px-16 md:text-lg"
+		style:color={textColor}
+	>
+		<p>
+			Hyeok Hweon Kang is a historian of early modern Korea and East Asia and Assistant Professor of
+			East Asian Languages and Cultures at Washington University in St. Louis. His research brings
+			together social and intellectual history, the history of science and technology, material
+			culture, and digital humanities.
+		</p>
 
-	<div class="text-md">
-		Kang’s first book, under contract with the University of Chicago Press, examines how artisans
-		and “ingeniators” (leaders of artisans) shaped a vibrant culture of material design and
-		knowledge-making in partnership with the Chosŏn Korean (1392–1910) state. His research on this
-		subject has received international awards including the 2021 International Committee on the
-		History of Technology Turriano Prize and the 2021 International Council of Asia Scholars Book
-		Prize (English—Best Dissertation in the Humanities).
+		<p class="border-l border-current pl-4 text-[0.95em]">
+			Affiliate Faculty, Comparative Literature and Thought and Department of History; Head of the
+			Korean Section.
+		</p>
 
-		<br /><br />
-		Kang is in the early stages of writing two other books on Korean science.
-		<i>Working Wisdom</i>
-		examines eighteenth-century army men, rustic scholars, and noblewomen who contributed to a practical
-		turn in Korean learning, by translating foreign knowledge into “everyday technologies” ranging from
-		cooking and husbandry to medicine and magic.
-		<i>Mr. Five Continents</i> centers Yi Kyugyŏng (1788–1856), a rustic bibliophile whose works
-		were written under his style name “Five Continents,” embodying his ambition to master global
-		science and technology from his provincial study on the eve of high imperialism.
-		<br /><br />
-		Kang maintains wide-ranging research and teaching interests in early modern science and technology,
-		material culture studies, digital humanities, and global history. His works have appeared in
-		<a
-			href="https://www.journals.uchicago.edu/doi/abs/10.1086/718283?journalCode=isis"
-			target="_blank">Isis</a
-		>,
-		<a href="https://www.tandfonline.com/doi/full/10.1080/07341512.2022.2153206" target="_blank"
-			>History and Technology</a
-		>,
-		<a href="https://muse.jhu.edu/pub/5/article/957972/pdf" target="_blank"
-			>Journal of World History</a
-		>,
-		<a href="https://culturalanalytics.org/article/id/1299/" target="_blank"
-			>Journal of Cultural Analytics</a
-		>, and
-		<a
-			href="https://read.dukeupress.edu/journal-of-asian-studies/article-abstract/83/1/116/384189/Kingpins-at-CourtContraband-Diplomacy-between?redirectedFrom=fulltext"
-			target="_blank">Journal of Asian Studies</a
-		>, among others.
+		<p>
+			His first book, <i>By Virtue of Craft: Sciences of Making in Chosŏn Korea</i> (University of Chicago
+			Press, August 2027), recasts the relationship between technical knowledge and statecraft in Korean
+			history. Combining archival research with material analysis and experimental reconstruction, it
+			examines how artisans and experts recorded and theorized their knowledge of making. The book argues
+			that these “sciences of making” took shape through changing political and moral commitments to useful
+			knowledge and good government.
+		</p>
 
-		<br /><br />
-		Kang was an
-		<a href="https://www.acls.org/" target="_blank"
-			>American Council of Learned Societies Fellow
-		</a>
-		in 2023–24. He is currently serving as co-chair of the Forum for the History of Science in Asia at
-		the
-		<a href="https://hssonline.org/" target="_blank">History of Science Society</a>.
-		<a href="https://ealc.wustl.edu/" target="_blank">East Asian Languages and Cultures</a>
-	</div>
-</div>
+		<p>
+			Kang is currently working on two new book projects. <i>The Practical Age</i> examines how
+			practical knowledge and expertise acquired new moral and intellectual authority in
+			eighteenth-century Korea within a broader global turn toward usefulness.
+			<i>Mr. Five Continents</i> is an intellectual biography of the encyclopedist Yi Kyugyŏng (1788–1856),
+			exploring his efforts to master global knowledge of geography, technology, and the natural world
+			from his study in provincial Korea.
+		</p>
+
+		<p>
+			Raised in Guatemala City, Kang earned his BA at Emory University and his PhD in History and
+			East Asian Languages at Harvard University. Before joining WashU in 2021, he held a D. Kim
+			Foundation Postdoctoral Fellowship in the Department of the History of Science and Technology
+			at Johns Hopkins University.
+		</p>
+
+		<p class="border-t border-current pt-6">
+			Kang’s research received the 2021 Turriano Prize and the 2021 ICAS prize for the best
+			humanities dissertation in English. He held an
+			<a href="https://www.acls.org/" target="_blank"
+				>American Council of Learned Societies Fellowship</a
+			>
+			in 2023–24 and serves as co-chair of the History of Science Society’s Forum for the History of Science
+			in Asia.
+		</p>
+	</section>
+
+	<section class="bg-[#121212] px-8 py-20 text-[#aeb4ae] md:px-16">
+		<h2 class="mb-8 font-baskervville text-[12vw] leading-[0.85] md:text-7xl">
+			DIGITAL_<br />HUMANITIES
+		</h2>
+		<video autoplay muted loop playsinline class="mb-8 w-full">
+			<source src={XZLoop} type="video/mp4" />
+		</video>
+		<p class="text-base leading-relaxed md:text-lg">
+			Kang uses digital methods to investigate historical relationships and material objects. His
+			projects include a network analysis of seventeenth-century smuggling networks, published in
+			the
+			<a
+				class="underline"
+				href="https://culturalanalytics.org/article/68188-how-network-analysis-uncovers-international-networks-of-smuggling-history-criminals-in-nagasaki-japan-circa-1667"
+				target="_blank"
+			>
+				<i>Journal of Cultural Analytics</i></a
+			>. In collaboration with imaging scientists, designers, and engineers, he also uses CT
+			scanning, 3D modeling, and experimental reconstruction to study historical artifacts. These
+			collaborations connect written and visual sources with the construction and testing of
+			objects, including sundials, water pumps, and steam engines.
+		</p>
+	</section>
+
+	<section class="bg-[#121212] px-8 py-20 text-[#aeb4ae] md:px-16">
+		<h2 class="mb-8 font-baskervville text-[12vw] leading-[0.85] md:text-7xl">
+			MATERIAL_<br />CULTURE
+		</h2>
+		<img src={gun} alt="Chosŏn matchlock" class="mb-8 w-full" />
+		<p class="text-base leading-relaxed md:text-lg">
+			Kang examines early modern matchlocks to reconstruct the technical knowledge involved in their
+			design, manufacture, and use. Working with artifacts from Chosŏn Korea, Tokugawa Japan, and
+			Portuguese Malacca, he studies surviving mechanisms to understand how firearms were made and
+			operated. His research on the subject has appeared in
+			<a
+				class="underline"
+				href="https://www.tandfonline.com/doi/full/10.1080/07341512.2022.2153206"
+				target="_blank"
+			>
+				<i>History and Technology</i>
+			</a>
+			and the
+			<a class="underline" href="https://muse.jhu.edu/pub/5/article/957972/pdf" target="_blank">
+				<i>Journal of World History</i></a
+			>.
+		</p>
+	</section>
+</main>

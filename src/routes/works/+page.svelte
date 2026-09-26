@@ -2,7 +2,7 @@
 	import Logo from '$lib/components/overlay/Logo.svelte';
 	import Tabs from '$lib/components/overlay/Tabs.svelte';
 	import type { Work } from '$lib/constants/works';
-	import { works } from '$lib/constants/works';
+	import { bookProjects, works } from '$lib/constants/works';
 	import { onMount } from 'svelte';
 	import Carousel from '$lib/components/works/Carousel.svelte';
 	import TextSlideY from '$lib/components/effects/TextSlideY.svelte';
@@ -47,6 +47,28 @@
 			class="h-full w-full xl:w-3/4 2xl:w-2/3 prose prose-dark no-underline font-crimson max-w-none"
 		>
 			{#each Object.entries(works) as [k, v]}
+				{#if k === 'PEER-REVIEWED ARTICLES'}
+					<h2 class="font-bold">
+						<TextSlideY
+							text="BOOK PROJECTS IN PROGRESS"
+							center={false}
+							distance={'3rem'}
+							delay={100}
+						/>
+					</h2>
+					<div class="mb-8 space-y-5">
+						{#each bookProjects as project, i}
+							<div class="text-md leading-5 xl:text-lg">
+								<TextSlideY
+									text={project.citation}
+									center={false}
+									distance={'4rem'}
+									delay={50 * (i + 1)}
+								/>
+							</div>
+						{/each}
+					</div>
+				{/if}
 				<h2
 					class="transform-[opacity] duration-200 font-bold"
 					style:opacity="{selectedIndex == -1 ||
