@@ -15,11 +15,11 @@
 	<div class="grid w-[82vw] grid-cols-[minmax(0,3fr)_minmax(18rem,2fr)] gap-12 2xl:w-[76vw]">
 		<div class="max-w-none font-crimson text-base leading-relaxed 2xl:text-[1.15rem]">
 			<p>
-				Hyeok Hweon "H. H." Kang is a historian of early modern Korea and East Asia whose research spans social and intellectual history, digital humanities, and the history of science and technology. He is currently Assistant Professor of East Asian Languages and Cultures at Washington University in St. Louis, where he also holds an appointment by courtesy in the Department of History and the Department of Comparative Literature and Thought.
+				Hyeok Hweon “H. H.” Kang is a historian of early modern Korea and East Asia whose research spans social and intellectual history, digital humanities, and the history of science and technology. He is currently Assistant Professor of East Asian Languages and Cultures at Washington University in St. Louis, where he also holds an appointment by courtesy in the Department of History and the Department of Comparative Literature and Thought.
 			</p>
 
 			<p class="mt-6">
-				Kang's first book, <i>By Virtue of Craft: Sciences of Making in Chosŏn Korea</i> (University of Chicago Press, August 2027), recasts the relationship between technical knowledge and statecraft in Korean history. Combining archival research with material analysis and experimental reconstruction, it examines how artisans and experts recorded and theorized their knowledge of making. The book argues that these “sciences of making” took shape through changing political and moral commitments to useful knowledge and good government.
+				Kang’s first book, <i>By Virtue of Craft: Sciences of Making in Chosŏn Korea</i> (University of Chicago Press, August 2027), recasts the relationship between technical knowledge and statecraft in Korean history. Combining archival research with material analysis and experimental reconstruction, it examines how artisans and experts recorded and theorized their knowledge of making. The book argues that these “sciences of making” took shape through changing political and moral commitments to useful knowledge and good government.
 			</p>
 
 			<p class="mt-6">
