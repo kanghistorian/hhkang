@@ -59,7 +59,7 @@ export const works: Works = {
 			citation:
 				'<a class="no-underline" href="https://muse.jhu.edu/pub/5/article/908616" target="_blank">With Michelle Suh, “Korean Chronicles under a Macroscope: Towards a Digital Infrastructure in Premodern Korean Studies,”</a> <i>Korean Studies</i> 47, no. 1 (2023): 8–33',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/Silloker.webp?updatedAt=1754240751220',
+				'/silloker.png',
 			index: 4
 		},
 		{
@@ -73,21 +73,21 @@ export const works: Works = {
 			citation:
 				'<a class="no-underline" href="https://www.journals.uchicago.edu/doi/abs/10.1086/718283?journalCode=isis" target="_blank">“Cooking Niter, Prototyping Nature: Saltpeter and Artisanal Experiment in Korea, 1592–1635,”</a> <i>Isis: A Journal of the History of Science Society</i> 113, no. 1 (March 2022): 1–21',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/Cooking%20Niter.webp?updatedAt=1754240750151',
+				'/cooking_niter.png',
 			index: 6
 		},
 		{
 			citation:
 				'<a class="no-underline" href="https://www.jstor.org/stable/43286060" target="_blank">With Tonio Andrade and Kirsten Cooper, “A Korean Military Revolution? Parallel Military Innovations in East Asia and Europe,”</a> <i>Journal of World History</i> 25, no. 1 (March 2014): 51–84',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/A%20Korean%20Military%20Revolution_.webp?updatedAt=1754240750160',
+				'/korean_military_rev.png',
 			index: 7
 		},
 		{
 			citation:
 				'<a class="no-underline" href="https://brill.com/view/journals/jcmh/2/2/article-p127_2.xml?language=en" target="_blank">“Big Heads and Buddhist Demons: The Korean Musketry Revolution and the Northern Expeditions of 1654 and 1658,”</a> <i>Journal of Chinese Military History</i> 2, no. 2 (2013): 127–89',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/Big%20Heads%20and%20Buddhist%20Demons.webp?updatedAt=1754240750266',
+				'/big_heads.png',
 			index: 8
 		}
 	],
@@ -103,14 +103,14 @@ export const works: Works = {
 			citation:
 				'<a class="no-underline" href="https://elmhurst.ecampus.com/military-revolution-revolutions-military/bk/9783110661415" target="_blank">“Difference in an Age of Parity: Technology and Global Military History,”</a> in <i>The Military Revolution and Revolutions in Military Affairs</i>, ed. Mark C. Fissel (Berlin: De Gruyter, 2022), 29–64',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/Difference%20in%20an%20age%20of%20parity.webp?updatedAt=1754240750182',
+				'/difference_in_parity.png',
 			index: 10
 		},
 		{
 			citation:
 				'<a class="no-underline" href="https://www.routledge.com/Routledge-Handbook-of-Asian-Music-Cultural-Intersections/Lee/p/book/9780367723262" target="_blank">“Nature of Narye: Sound, Spectacle, and the Politics of Performance in Fifteenth-Century Korea, 1392–1592,”</a> in <i>Routledge Handbook of Asian Music: Cultural Intersections</i>, ed. Tong Soon Lee (London: Routledge, 2021), 150–73',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/Nature%20of%20Narye.webp?updatedAt=1754240751326',
+				'/nature_of_narye.png',
 			index: 11
 		}
 	],
