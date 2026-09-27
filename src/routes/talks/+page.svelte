@@ -2,7 +2,7 @@
 	import Logo from "$lib/components/overlay/Logo.svelte";
 	import Tabs from "$lib/components/overlay/Tabs.svelte";
 	import TextSlideY from "$lib/components/effects/TextSlideY.svelte";
-	import { recordedTalks, talkPosters, upcomingTalk } from "$lib/constants/talks";
+	import { recordedTalks, talkPosters, upcomingTalks } from "$lib/constants/talks";
 
 	const ink = "#121212";
 	const mist = "#aeb4ae";
@@ -42,27 +42,31 @@
 
 	<main>
 		<section class="border-y border-[#aeb4ae]/30 bg-[#d8d9d2] text-[#121212]">
-			<div class="mx-auto grid max-w-[1600px] lg:grid-cols-12">
-				<div
-					class="border-b border-[#121212]/25 p-8 md:p-12 lg:col-span-4 lg:border-r lg:border-b-0 lg:p-16"
-				>
-					<p class="font-jws text-xs tracking-[0.28em]">UPCOMING</p>
-					<p class="font-crimson mt-24 text-lg italic lg:mt-48">Next appearance</p>
-				</div>
-				<div class="p-8 md:p-12 lg:col-span-8 lg:p-16">
-					<p class="font-jws text-xs tracking-[0.24em]">{upcomingTalk.venue.toUpperCase()}</p>
-					<h2
-						class="font-baskervville mt-12 max-w-4xl text-5xl leading-[0.95] tracking-[-0.04em] md:text-7xl xl:text-8xl"
-					>
-						{upcomingTalk.title}
-					</h2>
-					<div
-						class="font-crimson mt-16 flex flex-wrap items-center justify-between gap-8 border-t border-[#121212]/35 pt-6 text-lg"
-					>
-						<p>Details to be announced shortly.</p>
-						<span aria-hidden="true" class="text-4xl">↗</span>
+			<div class="mx-auto max-w-[1600px] flex flex-col">
+				{#each upcomingTalks as talk, i}
+					<div class="grid grid-cols-1 lg:grid-cols-12 {i > 0 ? "border-t border-[#121212]/25" : ""}">
+						<div
+							class="border-b border-[#121212]/25 p-8 md:p-12 lg:col-span-4 lg:border-r lg:border-b-0 lg:p-16"
+						>
+							<p class="font-jws text-xs tracking-[0.28em]">UPCOMING</p>
+							<p class="font-crimson mt-24 text-lg italic lg:mt-48">Next appearance</p>
+						</div>
+						<div class="p-8 md:p-12 lg:col-span-8 lg:p-16">
+							<p class="font-jws text-xs tracking-[0.24em]">{talk.venue.toUpperCase()}</p>
+							<h2
+								class="font-baskervville mt-12 max-w-4xl text-5xl leading-[0.95] tracking-[-0.04em] md:text-7xl xl:text-8xl"
+							>
+								{talk.title}
+							</h2>
+							<div
+								class="font-crimson mt-16 flex flex-wrap items-center justify-between gap-8 border-t border-[#121212]/35 pt-6 text-lg"
+							>
+								<p>Details to be announced shortly.</p>
+								<span aria-hidden="true" class="text-4xl">↗</span>
+							</div>
+						</div>
 					</div>
-				</div>
+				{/each}
 			</div>
 		</section>
 

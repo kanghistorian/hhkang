@@ -15,10 +15,16 @@ export type TalkPoster = {
 	image: string;
 };
 
-export const upcomingTalk = {
-	title: "Premodern Korean Studies in the Age of AI",
-	venue: "Tateuchi East Asia Library (TEAL) Digital Scholarship Series, University of Washington",
-};
+export const upcomingTalks = [
+	{
+		title: "Premodern Korean Studies in the Age of AI",
+		venue: "Tateuchi East Asia Library (TEAL) Digital Scholarship Series, University of Washington",
+	},
+	{
+		title: "By Virtue of Craft: Sciences of Making in Chosŏn Korea",
+		venue: "Emerging Scholars Speakers Initiative Program, Asia in Depth Series, hosted by Asian Studies Program, History Department, and the School of Foreign Service, Georgetown University",
+	}
+];
 
 export const recordedTalks: RecordedTalk[] = [
 	{
