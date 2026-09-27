@@ -38,7 +38,7 @@ export const works: Works = {
 			citation:
 				'<a class="no-underline" href="https://muse.jhu.edu/pub/5/article/957972/pdf" target="_blank">“Global History and the Measures of Early Modern Technology: Europe, East Asia, and the Case of Smoothbore Ballistics,”</a> <i>Journal of World History</i> 36, no. 2 (2025): 169–204',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/Global%20history.webp?updatedAt=1754240750332',
+				'/global_history.png',
 			index: 1
 		},
 		{
