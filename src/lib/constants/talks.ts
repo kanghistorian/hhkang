@@ -29,7 +29,7 @@ export const recordedTalks: RecordedTalk[] = [
 		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
 	},
 	{
-		title: "Sciences of Making in Chosŏn Korea",
+		title: "Engineers of the Confucian State",
 		venue: "Selected lecture · H. H. Kang",
 		year: "Watch on YouTube",
 		href: "https://www.youtube.com/results?search_query=Hyeok+Hweon+Kang",
