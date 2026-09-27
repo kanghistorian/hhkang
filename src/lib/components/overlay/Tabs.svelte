@@ -59,14 +59,14 @@
 	<a aria-label="About" href="/about" rel="noopener noreferrer">
 		<TextSlideX text={"ABOUT"} load={sidebarOpen} />
 	</a>
-	<a aria-label="Teaching" href="/teaching" rel="noopener noreferrer">
-		<TextSlideX text={"TEACHING"} load={sidebarOpen} />
-	</a>
 	<a aria-label="Works" href="/works" rel="noopener noreferrer">
 		<TextSlideX text={"WORKS"} load={sidebarOpen} />
 	</a>
 	<a aria-label="Talks" href="/talks" rel="noopener noreferrer">
 		<TextSlideX text={"TALKS"} load={sidebarOpen} />
+	</a>
+	<a aria-label="Teaching" href="/teaching" rel="noopener noreferrer">
+		<TextSlideX text={"TEACHING"} load={sidebarOpen} />
 	</a>
 	<a aria-label="Gallery" href="/gallery" rel="noopener noreferrer">
 		<TextSlideX text={"GALLERY"} load={sidebarOpen} />
@@ -96,14 +96,14 @@
 	<a aria-label="About" href="/about" rel="noopener noreferrer">
 		<TextSlideY text={"ABOUT"} {delay} />
 	</a>
-	<a aria-label="Teaching" href="/teaching" rel="noopener noreferrer">
-		<TextSlideY text={"TEACHING"} delay={delay + staggerAmount * 2} />
-	</a>
 	<a aria-label="Works" href="/works" rel="noopener noreferrer">
 		<TextSlideY text={"WORKS"} delay={delay + staggerAmount * 1} />
 	</a>
 	<a aria-label="Talks" href="/talks" rel="noopener noreferrer">
-		<TextSlideY text={"TALKS"} delay={delay + staggerAmount * 3} />
+		<TextSlideY text={"TALKS"} delay={delay + staggerAmount * 2} />
+	</a>
+	<a aria-label="Teaching" href="/teaching" rel="noopener noreferrer">
+		<TextSlideY text={"TEACHING"} delay={delay + staggerAmount * 3} />
 	</a>
 	<a aria-label="Gallery" href="/gallery" rel="noopener noreferrer">
 		<TextSlideY text={"GALLERY"} delay={delay + staggerAmount * 4} />
