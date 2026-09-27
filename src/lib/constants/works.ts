@@ -52,7 +52,7 @@ export const works: Works = {
 			citation:
 				'<a class="no-underline" href="https://doi.org/10.1080/07341512.2022.2153206" target="_blank">“Reverse Engineering as History and Method: The Portuguese Espingarda in Chosŏn Korea,”</a> <i>History and Technology</i> 38, no. 2–3 (2023): 144–66',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/reverse%20engineering.webp?updatedAt=1754240751303',
+				'/reverse_engineering.png',
 			index: 3
 		},
 		{
