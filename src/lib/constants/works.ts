@@ -66,7 +66,7 @@ export const works: Works = {
 			citation:
 				'<a class="no-underline" href="https://doi.org/10.22148/001c.68188" target="_blank">“How Network Analysis Uncovers International Networks of Smuggling History: Criminals in Nagasaki, Japan circa 1667,”</a> <i>Journal of Cultural Analytics</i> 8, no. 1 (February 2023): 1–20',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/How%20Network.webp?updatedAt=1754240750244',
+				'/how_network.png',
 			index: 5
 		},
 		{
