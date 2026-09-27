@@ -30,7 +30,7 @@ export const recordedTalks: RecordedTalk[] = [
 	},
 	{
 		title: "Engineers of the Confucian State",
-		venue: "George Washington University / HKU",
+		venue: "George Washington University · Institute of Korean Studies",
 		year: "Watch on YouTube",
 		href: "https://www.youtube.com/results?search_query=Hyeok+Hweon+Kang",
 		image: "/talks/Kang_Talk_Posters/2026-04-17_GWU_Engineers_of_the_Confucian_State_Banner.jpg"
