@@ -140,7 +140,7 @@ export const works: Works = {
 	'OTHER PUBLICATIONS': [
 		{
 			citation:
-				'“Silloker,” database and search engine for Korean historical chronicles, June 1, 2022–present, https://silloker.com. Co-designed with Michelle Suh',
+				'<a class="no-underline" href="http://silloker.com/search" target="_blank">“Silloker,” database and search engine for Korean historical chronicles, June 1, 2022–present, http://silloker.com/search</a> Co-designed with Michelle Suh',
 index: 15
 		},
 		{
