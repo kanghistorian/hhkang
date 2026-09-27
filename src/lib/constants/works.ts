@@ -119,14 +119,14 @@ export const works: Works = {
 			citation:
 				'<a class="no-underline" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003113238" target="_blank">Review of Lim Jongtae 임종태, <i>Travel, Reform, and Science and Technology in Eighteenth-Century Korea</i> 여행과 개혁, 그리고 18세기 조선의 과학기술,</a> <i>Journal of the Korean History of Science Society</i> 46, no. 2 (2024): 427–429',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/book%20review%20%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%A9%E1%86%BC%E1%84%90%E1%85%A2.webp?updatedAt=1754240749942',
+				'/kci_preview.png',
 			index: 12
 		},
 		{
 			citation:
 				'<a class="no-underline" href="https://www.academia.edu/106227155/Review_of_Technical_Knowledge_in_Early_Modern_Japan_eds_Erich_Pauer_and_Ruselle_Meade" target="_blank">Review of Technical Knowledge in Early Modern Japan,</a> eds. Erich Pauer and Ruselle Meade, <i>Japan Review</i> 37 (2022): 190–2',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/Technical%20Knowledge%20in%20Early%20Modern%20Japan.webp?updatedAt=1754240751295',
+				'/jare_preview.png',
 			index: 13
 		},
 		{
