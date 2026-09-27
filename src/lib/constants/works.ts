@@ -141,25 +141,21 @@ export const works: Works = {
 		{
 			citation:
 				'“Silloker,” database and search engine for Korean historical chronicles, June 1, 2022–present, https://silloker.com. Co-designed with Michelle Suh',
-			image: rand(),
-			index: 15
+index: 15
 		},
 		{
 			citation: '“Climate Change’s Fatal Synergy,” <i>Sense & Sustainability</i>, May 11, 2015',
-			image: rand(),
-			index: 16
+index: 16
 		},
 		{
 			citation:
 				'“The Little Ice Age: Heterogeneity of Impact and Japan’s Success Story?”, <i>Sense & Sustainability</i>, December 5, 2014',
-			image: rand(),
-			index: 17
+index: 17
 		},
 		{
 			citation:
 				'“The Little Ice Age: History of Climate-Induced Crisis in Europe and East Asia,” <i>Sense & Sustainability</i>, October 15, 2014',
-			image: rand(),
-			index: 18
+index: 18
 		}
 	]
 };
