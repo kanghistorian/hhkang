@@ -104,7 +104,7 @@
 			{/each}
 			<div class="pt-10 underline text-2xl">
 				<a
-					href="https://drive.google.com/file/d/1pHn_A6rkDc4yejp-LZwo4VVzvHuWYaBA/view?usp=sharing"
+					href="/CV_Kang.pdf"
 					target="_blank"
 				>
 					<TextSlideY
