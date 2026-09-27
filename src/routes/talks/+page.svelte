@@ -117,25 +117,29 @@
 				<div class="poster-grid grid gap-7 sm:grid-cols-2 xl:grid-cols-4">
 					{#each talkPosters as poster, i}
 						<article
-							class="relative overflow-hidden flex aspect-[3/4] flex-col justify-between p-7 text-white shadow-2xl transition duration-500 hover:-translate-y-2"
-							style:background-image="url({poster.image})"
-							style:background-size="cover"
-							style:background-position="center"
+							class="poster poster--{poster.tone} flex aspect-[3/4] flex-col justify-between p-7 text-[#121212] shadow-2xl transition duration-500 hover:-translate-y-2"
 						>
-							<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
-							
-							<div class="relative z-10 font-jws flex justify-between border-b border-white/30 pb-3 text-[0.65rem] tracking-[0.2em]">
+							<div
+								class="font-jws flex justify-between border-b border-current pb-3 text-[0.65rem] tracking-[0.2em]"
+							>
 								<span>H. H. KANG</span><span>0{i + 1}</span>
 							</div>
-							<h3
-								class="relative z-10 font-baskervville text-[clamp(2rem,3vw,3.6rem)] leading-[0.92] tracking-[-0.04em]"
-							>
-								{poster.title}
-							</h3>
-							<div class="relative z-10 border-t border-white/30 pt-4">
+							
+							<div class="flex items-center justify-center my-6">
+								<img 
+									src={poster.image} 
+									alt={poster.title} 
+									class="max-h-[55%] w-auto shadow-md border border-black/10" 
+								/>
+							</div>
+
+							<div class="border-t border-current pt-4">
+								<h3 class="font-baskervville text-xl leading-tight tracking-tight mb-2">
+									{poster.title}
+								</h3>
 								<p class="font-jws text-[0.65rem] tracking-[0.16em]">{poster.venue}</p>
-								<p class="font-crimson mt-2 text-base leading-tight">{poster.location}</p>
-								<p class="font-baskervville mt-6 text-2xl">{poster.date}</p>
+								<p class="font-crimson mt-1 text-sm leading-tight">{poster.location}</p>
+								<p class="font-baskervville mt-4 text-xl">{poster.date}</p>
 							</div>
 						</article>
 					{/each}
@@ -146,6 +150,15 @@
 </div>
 
 <style>
+	.poster--sage {
+		background: #aeb4ae;
+	}
+	.poster--clay {
+		background: #bd6e52;
+	}
+	.poster--paper {
+		background: #ded9cc;
+	}
 	.poster:nth-child(even) {
 		margin-top: 2.5rem;
 	}
