@@ -15,20 +15,25 @@ export type TalkPoster = {
 	image: string;
 };
 
+export const upcomingTalk = {
+	title: "Premodern Korean Studies in the Age of AI",
+	venue: "Tateuchi East Asia Library (TEAL) Digital Scholarship Series, University of Washington",
+};
+
 export const recordedTalks: RecordedTalk[] = [
 	{
 		title: "The Wicked Factory? Artisans, Ethics, and Reform in Sixteenth-Century Chosŏn",
 		venue: "Korean Treasures at Harvard · Korea Institute",
 		year: "2025",
 		href: "https://www.youtube.com/watch?v=qXIt5WNpqWs",
-		image: "https://i.ytimg.com/vi/qXIt5WNpqWs/hqdefault.jpg"
+		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
 	},
 	{
 		title: "Sciences of Making in Chosŏn Korea",
 		venue: "Selected lecture · H. H. Kang",
 		year: "Watch on YouTube",
 		href: "https://www.youtube.com/results?search_query=Hyeok+Hweon+Kang",
-		image: "/reverse_engineering.png"
+		image: "/talks/Kang_Talk_Posters/2026-04-17_GWU_Engineers_of_the_Confucian_State_Banner.jpg"
 	}
 ];
 
@@ -74,4 +79,3 @@ export const talkPosters: TalkPoster[] = [
 		image: "/talks/Kang_Talk_Posters/2022-01-13_Barcelona_Artisan_Squad_Flyer.pdf"
 	}
 ];
-
