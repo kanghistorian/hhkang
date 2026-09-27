@@ -4,7 +4,7 @@ import p3 from '$lib/media/p3.webp';
 
 export type Work = {
 	citation: string;
-	image: string;
+	image?: string;
 	index: number;
 };
 
@@ -30,8 +30,6 @@ export const works: Works = {
 		{
 			citation:
 				'<i>By Virtue of Craft: Sciences of Making in Chosŏn Korea</i> (University of Chicago Press, forthcoming August 2027).',
-			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/Monograph,%20Artisanal%20Heart.webp?updatedAt=1754240751365',
 			index: 0
 		}
 	],

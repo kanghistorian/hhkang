@@ -16,7 +16,7 @@
 	const textColor: string = '#aeb4ae';
 
 	function onMouseEnter(work: Work) {
-		selectedIndex = work.index >= 15 ? -1 : work.index;
+		selectedIndex = work.image ? work.index : -1;
 	}
 
 	function onMouseLeave(work: Work) {
@@ -26,7 +26,7 @@
 	onMount(() => {
 		flatImages = Object.values(works)
 			.flat()
-			.slice(0, 15)
+			.filter((work): work is Work & { image: string } => Boolean(work.image))
 			.map(({ index, image }) => ({ index, image }));
 		setTimeout(() => {
 			load = true;
