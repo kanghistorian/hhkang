@@ -129,11 +129,11 @@
 								<span>H. H. KANG</span><span>0{i + 1}</span>
 							</div>
 							
-							<div class="flex items-center justify-center my-6">
+							<div class="flex items-center justify-center my-2">
 								<img 
 									src={poster.image} 
 									alt={poster.title} 
-									class="max-h-[55%] w-auto shadow-md border border-black/10" 
+									class="max-h-[65%] w-auto shadow-md border border-black/10" 
 								/>
 							</div>
 
