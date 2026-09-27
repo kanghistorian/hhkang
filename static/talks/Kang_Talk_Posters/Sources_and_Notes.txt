@@ -1,0 +1,67 @@
+Talk posters and promotional graphics — H. H. Kang
+Located 27 September 2026 (UTC). Original files; no design alterations.
+
+2026 HKU — full portrait poster
+Advertised title: Engineers of the Confucian State: The Making of Early Modern Korea
+Date: 28 April 2026
+Differs from the supplied title, Ingenious: Statecraft and Craft Production in Early Modern Korea.
+Event: https://web.smlc.hku.hk/post/apr-28-engineers-of-the-confucian-state-the-making-of-early-modern-korea
+Original image: https://static.wixstatic.com/media/b118b8_f9ce9caa526c443697355509db2ea9b0~mv2.jpg
+
+2026 George Washington — landscape promotional banner with speaker portrait
+Advertised title: Engineers of the Confucian State: The Making of Early Modern Korea
+Event date: 17 April 2026, according to the individual calendar and Eventbrite listings. The annual archive instead lists 15 April.
+Differs from the supplied title, Ingeniators: Craft Production and Knowledge in Early Modern Korea.
+Event: https://calendar.gwu.edu/event/engineers-of-the-confucian-state-the-making-of-early-modern-korea
+Image: https://localist-images.azureedge.net/photos/52507327292918/huge/c51f2a30bf39bd0d5d9706479f2c5f17205f29ba.jpg
+
+2025 Harvard — full poster
+The Wicked Factory? Artisans, Ethics, and Reform in Sixteenth-Century Chosŏn
+6 February 2025
+Event: https://korea.fas.harvard.edu/event/wicked-factory-artisans-ethics-and-reform-sixteenth-century-chos%C5%8Fn
+Original image: https://korea.fas.harvard.edu/sites/g/files/omnuum10896/files/koreainstitute/files/ki_korean_treasure_02.06_final.jpg
+
+2025 Kansas — general symposium promotional banner
+Digital Age Symposium, 4–5 April 2025. Does not name individual speakers.
+The accompanying event program lists Kang’s talk as Digital Chosŏn: 3D Modeling and Virtual Exhibitions, rather than Reworking Chosŏn.
+Event: https://calendar.ku.edu/event/digital-age-symposium
+Image: https://localist-images.azureedge.net/photos/49040709576091/huge/291d019cbb043444dcd5143bb6210081066abab1.jpg
+
+2022 Barcelona — one-page PDF flyer
+Advertised title: Artisan Squad: Technology, Innovation, and the Early Modern Craftscape in Post-Imjin Korea
+The original flyer prints 13 January 2021, apparently a year typo: its Thursday date, January 2022 upload path, and 2021–2022 series program point to 13 January 2022. Original preserved unchanged.
+Event: https://aftermath.uab.cat/webinar-talk-technology-innovation-and-the-early-modern-craftscape-in-post-imjin-korea/
+Flyer: https://aftermath.uab.cat/wp-content/uploads/2022/01/Flyer-Hyeok-Hweon.pdf
+Series program: https://aftermath.uab.cat/wp-content/uploads/2022/03/Seminar-program-2021-2022-Full.pdf
+
+Additional searches
+Public event listings located for Stanford 2023 and Cornell 2022, but no separate full poster confirmed. Cornell uses a speaker headshot. Minnesota archive confirms the 1 April 2022 talk but no poster was confirmed there. AATK poster recovered on the final audit; the earlier report missed its embedded image. Stanford’s event image is a historical train illustration without promotional text.
+No public poster located in this search for the remaining supplied talks. This does not establish that no poster was produced.
+
+
+2024 AATK — full event poster, recovered during audit
+5 April 2024. Science, Technology, and Medicine in Chosŏn Korea. Features Hyeok Hweon Kang and Soyoung Suh.
+Kang’s title: The Artisanal Heart: Engineering and Statecraft in Early Modern Korea.
+Event: https://aatk.org/9102-2/
+Original image: https://aatk.org/wp-content/uploads/2024/03/AATK-2024-Spring-Colloquium-Poster.jpg
+
+Audit scope: public web sources; searches by speaker name, institution, lecture series, Korean name, and alternate titles. No claim of exhaustive coverage of unindexed or private materials.
+
+
+SECOND AUDIT — 27 September 2026 UTC
+Seven promotional files for six events: five JPG images and two PDFs.
+Added the two-page GW program flyer linked from the annual archive. Both pages visually inspected.
+PDF: https://emma-assets.s3.amazonaws.com/0oueb/3778505401aa4d15513b5e9478b9f1be/Hyeok_Hweon_Kang_Program_Flyer.pdf
+Replaced the GW calendar banner with the 1280 x 720 original from the institute archive. The source filename misleadingly names Isabelle Sancho, but visual inspection confirms that the graphic is for H. H. Kang.
+Image: https://gwiks.elliott.gwu.edu/files/2026/02/Premodern-Korea-Lecture-Series-with-Isabelle-Sanchos-1.jpg
+Archive: https://gwiks.elliott.gwu.edu/2025-2026-event-archive/
+
+Auditing method: inspected complete retrieved event HTML for image sources, image links, PDF attachments, embedded objects, and background images; downloaded and visually inspected ambiguous event images. This recovered the GW program attachment.
+Stanford: inspected CEAS page and calendar image; the image is a historical train illustration, not a flyer.
+Cornell: inspected calendar image; it is the speaker headshot, not a flyer.
+Minnesota: checked the complete archive and the relevant April 1, 2022 entry; no image or attachment appears in that entry.
+Georgetown: checked the complete series page, including image and attachment links; it lists H.H. Kang for October 29, 2026, with no event-specific graphic.
+Brown: searched name and title variants and reviewed the 38-page EAS 2023 newsletter as rendered page thumbnails, together with text searches; no relevant poster located in that source. This is not a complete audit of every Brown archive.
+Remaining events: searches by speaker, host, series, and Korean name/title variants did not locate a matching public graphic. Search absence is not proof that no flyer exists. Private email attachments, login-only social posts, and deleted/unindexed pages were not audited.
+
+See Audit_Status.csv for all 20 supplied talks.

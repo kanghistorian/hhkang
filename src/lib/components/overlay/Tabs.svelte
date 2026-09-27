@@ -43,14 +43,14 @@
 
 {#if cutoff}
 	<div
-		class="w-screen h-24 fixed top-0 left-0 z-30 bg-[rgba(255, 255, 255, 0.20)]
+		class="bg-[rgba(255, 255, 255, 0.20)] fixed top-0 left-0 z-30 h-24 w-screen
           backdrop-blur-[2px]"
 	></div>
 {/if}
 
 <div
-	class="absolute top-0 right-0 select-none flex flex-col lg:hidden items-center h-screen text-2xl
-          justify-center z-40 transition-[width] duration-1000 ease-out text-jws space-y-8"
+	class="text-jws absolute top-0 right-0 z-40 flex h-screen flex-col items-center justify-center
+          space-y-8 text-2xl transition-[width] duration-1000 ease-out select-none lg:hidden"
 	style:width={sidebarOpen ? '100vw' : '0vw'}
 	style:background-color={backgroundColor}
 	style:color={overlayColor}
@@ -68,11 +68,14 @@
 	<a aria-label="Works" href="/works" rel="noopener noreferrer">
 		<TextSlideX text={'WORKS'} load={sidebarOpen} />
 	</a>
+	<a aria-label="Talks" href="/talks" rel="noopener noreferrer">
+		<TextSlideX text={'TALKS'} load={sidebarOpen} />
+	</a>
 </div>
 
 <div
-	class="absolute top-8 right-8 select-none flex lg:hidden items-end z-50
-         transition-colors duration-1000 ease-out"
+	class="absolute top-8 right-8 z-50 flex items-end transition-colors duration-1000
+         ease-out select-none lg:hidden"
 >
 	{#if sidebarOpen}
 		<button onclick={() => sidebarClick()}>
@@ -86,8 +89,8 @@
 </div>
 
 <div
-	class="absolute font-jws text-md space-x-12 text-sm 2xl:text-base top-8 2xl:top-12 right-12 select-none hidden
-        lg:flex items-end leading-4 z-50 transition-colors duration-1000 ease-out"
+	class="font-jws text-md absolute top-8 right-12 z-50 hidden items-end space-x-12 text-sm leading-4
+        transition-colors duration-1000 ease-out select-none lg:flex 2xl:top-12 2xl:text-base"
 	style:color={overlayColor}
 >
 	<a aria-label="About" href="/about" rel="noopener noreferrer">
@@ -101,5 +104,8 @@
 	</a>
 	<a aria-label="Works" href="/works" rel="noopener noreferrer">
 		<TextSlideY text={'WORKS'} delay={delay + staggerAmount * 3} />
+	</a>
+	<a aria-label="Talks" href="/talks" rel="noopener noreferrer">
+		<TextSlideY text={'TALKS'} delay={delay + staggerAmount * 4} />
 	</a>
 </div>
