@@ -45,7 +45,7 @@ export const works: Works = {
 			citation:
 				'<a class="no-underline" href="https://read.dukeupress.edu/journal-of-asian-studies/article-abstract/83/1/116/384189/Kingpins-at-CourtContraband-Diplomacy-between?redirectedFrom=fulltext" target="_blank">“Kingpins at Court: Contraband Diplomacy between Korea, Japan, and Tsushima, 1607–1671,”</a> <i>Journal of Asian Studies</i> 83, no. 1 (2024): 116–139',
 			image:
-				'https://ik.imagekit.io/easton/hhkang/images/works/Kingpins%20at%20court%20(flip%20it).webp?updatedAt=1754240750397',
+				'/kingpins_at_court.png',
 			index: 2
 		},
 		{
