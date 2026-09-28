@@ -124,9 +124,9 @@
 							class="poster poster--{poster.tone} flex aspect-[3/4] flex-col justify-between p-7 text-[#121212] shadow-2xl transition duration-500 hover:-translate-y-2"
 						>
 							<div
-								class="font-jws flex justify-between border-b border-current pb-3 text-[0.65rem] tracking-[0.2em]"
+								class="font-jws flex justify-end border-b border-current pb-3 text-[0.65rem] tracking-[0.2em]"
 							>
-								<span>H. H. KANG</span><span>0{i + 1}</span>
+								<span>0{i + 1}</span>
 							</div>
 							
 							<div class="flex items-center justify-center my-0">
