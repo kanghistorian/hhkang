@@ -46,23 +46,23 @@
 				{#each upcomingTalks as talk, i}
 					<div class="grid grid-cols-1 lg:grid-cols-12 {i > 0 ? "border-t border-[#121212]/25" : ""}">
 						<div
-							class="border-b border-[#121212]/25 p-8 md:p-12 lg:col-span-4 lg:border-r lg:border-b-0 lg:p-16"
+							class="border-b border-[#121212]/25 p-8 md:p-12 lg:col-span-3 lg:border-r lg:border-b-0 lg:p-16"
 						>
 							<p class="font-jws text-xs tracking-[0.28em]">UPCOMING</p>
-							<p class="font-crimson mt-24 text-lg italic lg:mt-48">Next appearance</p>
+							<p class="font-crimson mt-12 text-base italic lg:mt-24">Next appearance</p>
 						</div>
-						<div class="p-8 md:p-12 lg:col-span-8 lg:p-16">
-							<p class="font-jws text-xs tracking-[0.24em]">{talk.venue.toUpperCase()}</p>
+						<div class="p-8 md:p-12 lg:col-span-9 lg:p-16">
+							<p class="font-jws text-xs tracking-[0.24em] mb-6">{talk.venue.toUpperCase()}</p>
 							<h2
-								class="font-baskervville mt-12 max-w-4xl text-5xl leading-[0.95] tracking-[-0.04em] md:text-7xl xl:text-8xl"
+								class="font-baskervville max-w-4xl text-3xl leading-[1.1] tracking-[-0.02em] md:text-5xl xl:text-6xl"
 							>
 								{talk.title}
 							</h2>
 							<div
-								class="font-crimson mt-16 flex flex-wrap items-center justify-between gap-8 border-t border-[#121212]/35 pt-6 text-lg"
+								class="font-crimson mt-12 flex flex-wrap items-center justify-between gap-8 border-t border-[#121212]/35 pt-6 text-base"
 							>
 								<p>Details to be announced shortly.</p>
-								<span aria-hidden="true" class="text-4xl">↗</span>
+								<span aria-hidden="true" class="text-3xl">↗</span>
 							</div>
 						</div>
 					</div>
@@ -124,9 +124,9 @@
 							class="poster poster--{poster.tone} flex aspect-[3/4] flex-col justify-between p-7 text-[#121212] shadow-2xl transition duration-500 hover:-translate-y-2"
 						>
 							<div
-								class="font-jws flex justify-end border-b border-current pb-3 text-[0.65rem] tracking-[0.2em]"
+								class="font-jws flex justify-between border-b border-current pb-3 text-[0.65rem] tracking-[0.2em]"
 							>
-								<span>0{i + 1}</span>
+								<span>H. H. KANG</span><span>0{i + 1}</span>
 							</div>
 							
 							<div class="flex items-center justify-center my-0">
