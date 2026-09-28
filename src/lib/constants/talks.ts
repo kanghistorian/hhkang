@@ -50,7 +50,7 @@ export const talkPosters: TalkPoster[] = [
 		location: "Cambridge, Massachusetts",
 		date: "February 2025",
 		tone: "clay",
-		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_H_Wicked_Factory_Poster.jpg"
+		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
 	},
 	{
 		title: "Engineers of the Confucian State",
