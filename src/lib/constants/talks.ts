@@ -53,7 +53,7 @@ export const talkPosters: TalkPoster[] = [
 		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
 	},
 	{
-		title: "Ingenious: Statecraft and Craft Production in Early Modern Korea",
+		title: "Engineers of the Confucian State",
 		venue: "University of Hong Kong",
 		location: "Hong Kong",
 		date: "April 2026",
@@ -61,7 +61,7 @@ export const talkPosters: TalkPoster[] = [
 		image: "/talks/Kang_Talk_Posters/2026-04-28_HKU_Engineers_of_the_Confucian_State_Poster.jpg"
 	},
 	{
-		title: "Ingeniators: Craft Production and Knowledge in Early Modern Korea",
+		title: "Engineers of the Confucian State",
 		venue: "George Washington University",
 		location: "Washington D.C.",
 		date: "April 2026",
@@ -69,8 +69,8 @@ export const talkPosters: TalkPoster[] = [
 		image: "/talks/Kang_Talk_Posters/2026-04-17_GWU_Engineers_of_the_Confucian_State_Banner.jpg"
 	},
 	{
-		title: "Reworking Chosŏn: 3D Modeling and Virtual Exhibitions",
-		venue: "University of Kansas",
+		title: "Digital Age Symposium",
+		venue: "Kansas",
 		location: "Kansas",
 		date: "April 2025",
 		tone: "sage",
