@@ -28,30 +28,22 @@ export const upcomingTalks = [
 
 export const recordedTalks: RecordedTalk[] = [
 	{
+		title: "Engineers of the Confucian State",
+		venue: "George Washington University · Institute of Korean Studies",
+		year: "2026",
+		href: "https://www.youtube.com/results?search_query=Hyeok+Hweon+Kang",
+		image: "/talks/Kang_Talk_Posters/2026-04-17_GWU_Engineers_of_the_Confucian_State_Banner.jpg"
+	},
+	{
 		title: "The Wicked Factory? Artisans, Ethics, and Reform in Sixteenth-Century Chosŏn",
 		venue: "Korean Treasures at Harvard · Korea Institute",
 		year: "2025",
 		href: "https://www.youtube.com/watch?v=qXIt5WNpqWs",
 		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
-	},
-	{
-		title: "Engineers of the Confucian State",
-		venue: "George Washington University · Institute of Korean Studies",
-		year: "Watch on YouTube",
-		href: "https://www.youtube.com/results?search_query=Hyeok+Hweon+Kang",
-		image: "/talks/Kang_Talk_Posters/2026-04-17_GWU_Engineers_of_the_Confucian_State_Banner.jpg"
 	}
 ];
 
 export const talkPosters: TalkPoster[] = [
-	{
-		title: "The Wicked Factory?",
-		venue: "Korean Treasures at Harvard",
-		location: "Cambridge, Massachusetts",
-		date: "February 2025",
-		tone: "clay",
-		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
-	},
 	{
 		title: "Engineers of the Confucian State",
 		venue: "University of Hong Kong",
@@ -77,6 +69,22 @@ export const talkPosters: TalkPoster[] = [
 		image: "/talks/Kang_Talk_Posters/2025-04-04_Kansas_Digital_Age_Symposium_Banner.jpg"
 	},
 	{
+		title: "The Wicked Factory?",
+		venue: "Korean Treasures at Harvard",
+		location: "Cambridge, Massachusetts",
+		date: "February 2025",
+		tone: "clay",
+		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
+	},
+	{
+		title: "Korea in the Global Silver Age",
+		venue: "Kansas",
+		location: "Kansas",
+		date: "February 2025",
+		tone: "paper",
+		image: "/talks/Kang_Talk_Posters/2025-02-24_Kansas_Korea_in_the_Global_Silver_Age_Poster.jpg"
+	},
+	{
 		title: "Science, Technology, and Medicine in Chosŏn Korea",
 		venue: "AATK",
 		location: "Colloquium",
@@ -93,14 +101,6 @@ export const talkPosters: TalkPoster[] = [
 		image: "/talks/Kang_Talk_Posters/2022-01-13_Barcelona_Artisan_Squad_Flyer.jpg"
 	},
 	{
-		title: "My Humble Explanation of Things (Somun sasŏl): A Source Reading",
-		venue: "New Frontiers in Premodern Korea Studies",
-		location: "Harvard University",
-		date: "June 2021",
-		tone: "sage",
-		image: "/talks/Kang_Talk_Posters/2021-06-11_Harvard_New_Frontiers_Workshop_Poster.jpg"
-	},
-	{
 		title: "Out of Thick Air: Western Pneumatics in Nineteenth Century Korea",
 		venue: "KoRN Inaugural Conference",
 		location: "Iowa",
@@ -109,11 +109,11 @@ export const talkPosters: TalkPoster[] = [
 		image: "/talks/Kang_Talk_Posters/2021-11-05_Iowa_KoRN_Inaugural_Conference_Promo.jpg"
 	},
 	{
-		title: "Korea in the Global Silver Age",
-		venue: "Kansas",
-		location: "Kansas",
-		date: "February 2025",
-		tone: "paper",
-		image: "/talks/Kang_Talk_Posters/2025-02-24_Kansas_Korea_in_the_Global_Silver_Age_Poster.jpg"
+		title: "My Humble Explanation of Things (Somun sasŏl): A Source Reading",
+		venue: "New Frontiers in Premodern Korea Studies",
+		location: "Harvard University",
+		date: "June 2021",
+		tone: "sage",
+		image: "/talks/Kang_Talk_Posters/2021-06-11_Harvard_New_Frontiers_Workshop_Poster.jpg"
 	}
 ];
