@@ -61,8 +61,8 @@ export const talkPosters: TalkPoster[] = [
 		image: "/talks/Kang_Talk_Posters/2026-04-17_GWU_Engineers_of_the_Confucian_State_Banner.jpg"
 	},
 	{
-		title: "Digital Age Symposium",
-		venue: "Kansas",
+		title: "Reworking Chosŏn: 3D Modeling and Virtual Exhibitions",
+		venue: "Digital Age Symposium, Center for East Asian Studies, University of Kansas",
 		location: "Kansas",
 		date: "April 2025",
 		tone: "sage",
