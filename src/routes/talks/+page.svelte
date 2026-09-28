@@ -54,14 +54,20 @@
 						<div class="p-8 md:p-12 lg:col-span-9 lg:p-16">
 							<p class="font-jws text-xs tracking-[0.24em] mb-6">{talk.venue.toUpperCase()}</p>
 							<h2
-								class="font-baskervville max-w-4xl text-3xl leading-[1.1] tracking-[-0.02em] md:text-5xl xl:text-6xl"
+								class="font-baskervville mt-12 max-w-4xl text-3xl leading-[1.1] tracking-[-0.02em] md:text-5xl xl:text-6xl"
 							>
 								{talk.title}
 							</h2>
 							<div
 								class="font-crimson mt-12 flex flex-wrap items-center justify-between gap-8 border-t border-[#121212]/35 pt-6 text-base"
 							>
-								<p>Details to be announced shortly.</p>
+								{#if talk.href}
+									<a href={talk.href} target="_blank" rel="noreferrer" class="hover:underline underline-offset-4">
+										View event details
+									</a>
+								{:else}
+									<p>Details to be announced shortly.</p>
+								{/if}
 								<span aria-hidden="true" class="text-3xl">↗</span>
 							</div>
 						</div>

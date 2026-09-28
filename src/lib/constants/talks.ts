@@ -23,23 +23,24 @@ export const upcomingTalks = [
 	{
 		title: "By Virtue of Craft: Sciences of Making in Chosŏn Korea",
 		venue: "Emerging Scholars Speakers Initiative Program, Asia in Depth Series, hosted by Asian Studies Program, History Department, and the School of Foreign Service, Georgetown University",
+		href: "https://history.georgetown.edu/gigh/asiaindepth/"
 	}
 ];
 
 export const recordedTalks: RecordedTalk[] = [
-	{
-		title: "Engineers of the Confucian State",
-		venue: "George Washington University · Institute of Korean Studies",
-		year: "2026",
-		href: "https://www.youtube.com/results?search_query=Hyeok+Hweon+Kang",
-		image: "/talks/Kang_Talk_Posters/2026-04-17_GWU_Engineers_of_the_Confucian_State_Banner.jpg"
-	},
 	{
 		title: "The Wicked Factory? Artisans, Ethics, and Reform in Sixteenth-Century Chosŏn",
 		venue: "Korean Treasures at Harvard · Korea Institute",
 		year: "2025",
 		href: "https://www.youtube.com/watch?v=qXIt5WNpqWs",
 		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
+	},
+	{
+		title: "Engineers of the Confucian State",
+		venue: "George Washington University · Institute of Korean Studies",
+		year: "2026",
+		href: "https://www.youtube.com/results?search_query=Hyeok+Hweon+Kang",
+		image: "/talks/Kang_Talk_Posters/2026-04-17_GWU_Engineers_of_the_Confucian_State_Banner.jpg"
 	}
 ];
 
