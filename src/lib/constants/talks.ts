@@ -82,6 +82,6 @@ export const talkPosters: TalkPoster[] = [
 		location: "Barcelona, Spain",
 		date: "01 · 13 · 2022",
 		tone: "paper",
-		image: "/talks/Kang_Talk_Posters/2022-01-13_Barcelona_Artisan_Squad_Flyer.pdf"
+		image: "/talks/Kang_Talk_Posters/2022-01-13_Barcelona_Artisan_Squad_Flyer.jpg"
 	}
 ];
