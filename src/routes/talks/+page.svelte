@@ -133,7 +133,7 @@
 								<img 
 									src={poster.image} 
 									alt={poster.title} 
-									class="max-h-[80%] w-auto shadow-md border border-black/10" 
+									class="max-h-[85%] w-auto shadow-md border border-black/10" 
 								/>
 							</div>
 
