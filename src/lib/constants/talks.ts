@@ -50,7 +50,7 @@ export const talkPosters: TalkPoster[] = [
 		location: "Cambridge, Massachusetts",
 		date: "February 2025",
 		tone: "clay",
-		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
+		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_H_Wicked_Factory_Poster.jpg"
 	},
 	{
 		title: "Engineers of the Confucian State",
@@ -91,5 +91,29 @@ export const talkPosters: TalkPoster[] = [
 		date: "January 2022",
 		tone: "paper",
 		image: "/talks/Kang_Talk_Posters/2022-01-13_Barcelona_Artisan_Squad_Flyer.jpg"
+	},
+	{
+		title: "My Humble Explanation of Things (Somun sasŏl): A Source Reading",
+		venue: "New Frontiers in Premodern Korea Studies",
+		location: "Harvard University",
+		date: "June 2021",
+		tone: "sage",
+		image: "/talks/Kang_Talk_Posters/2021-06-11_Harvard_New_Frontiers_Workshop_Poster.jpg"
+	},
+	{
+		title: "Out of Thick Air: Western Pneumatics in Nineteenth Century Korea",
+		venue: "KoRN Inaugural Conference",
+		location: "Iowa",
+		date: "November 2021",
+		tone: "clay",
+		image: "/talks/Kang_Talk_Posters/2021-11-05_Iowa_KoRN_Inaugural_Conference_Promo.jpg"
+	},
+	{
+		title: "Korea in the Global Silver Age",
+		venue: "Kansas",
+		location: "Kansas",
+		date: "February 2025",
+		tone: "paper",
+		image: "/talks/Kang_Talk_Posters/2025-02-24_Kansas_Korea_in_the_Global_Silver_Age_Poster.jpg"
 	}
 ];
