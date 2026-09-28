@@ -69,20 +69,20 @@ export const talkPosters: TalkPoster[] = [
 		image: "/talks/Kang_Talk_Posters/2025-04-04_Kansas_Digital_Age_Symposium_Banner.jpg"
 	},
 	{
-		title: "The Wicked Factory?",
-		venue: "Korean Treasures at Harvard",
-		location: "Cambridge, Massachusetts",
-		date: "February 2025",
-		tone: "clay",
-		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
-	},
-	{
 		title: "Korea in the Global Silver Age",
 		venue: "Kansas",
 		location: "Kansas",
 		date: "February 2025",
 		tone: "paper",
 		image: "/talks/Kang_Talk_Posters/2025-02-24_Kansas_Korea_in_the_Global_Silver_Age_Poster.jpg"
+	},
+	{
+		title: "The Wicked Factory?",
+		venue: "Korean Treasures at Harvard",
+		location: "Cambridge, Massachusetts",
+		date: "February 2025",
+		tone: "clay",
+		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
 	},
 	{
 		title: "Science, Technology, and Medicine in Chosŏn Korea",
