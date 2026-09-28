@@ -48,23 +48,31 @@ export const talkPosters: TalkPoster[] = [
 		title: "The Wicked Factory?",
 		venue: "Korean Treasures at Harvard",
 		location: "Cambridge, Massachusetts",
-		date: "06 · 02 · 2025",
+		date: "February 2025",
 		tone: "clay",
 		image: "/talks/Kang_Talk_Posters/2025-02-06_Harvard_The_Wicked_Factory_Poster.jpg"
 	},
 	{
 		title: "Engineers of the Confucian State",
-		venue: "HKU / GWU",
-		location: "Hong Kong / Washington D.C.",
+		venue: "University of Hong Kong",
+		location: "Hong Kong",
 		date: "April 2026",
 		tone: "paper",
 		image: "/talks/Kang_Talk_Posters/2026-04-28_HKU_Engineers_of_the_Confucian_State_Poster.jpg"
 	},
 	{
+		title: "Engineers of the Confucian State",
+		venue: "George Washington University",
+		location: "Washington D.C.",
+		date: "April 2026",
+		tone: "paper",
+		image: "/talks/Kang_Talk_Posters/2026-04-17_GWU_Engineers_of_the_Confucian_State_Banner.jpg"
+	},
+	{
 		title: "Digital Age Symposium",
 		venue: "Kansas",
 		location: "Kansas",
-		date: "04 · 04 · 2025",
+		date: "April 2025",
 		tone: "sage",
 		image: "/talks/Kang_Talk_Posters/2025-04-04_Kansas_Digital_Age_Symposium_Banner.jpg"
 	},
@@ -72,7 +80,7 @@ export const talkPosters: TalkPoster[] = [
 		title: "Spring Colloquium",
 		venue: "AATK",
 		location: "Colloquium",
-		date: "04 · 05 · 2024",
+		date: "April 2024",
 		tone: "clay",
 		image: "/talks/Kang_Talk_Posters/2024-04-05_AATK_Spring_Colloquium_Poster.jpg"
 	},
@@ -80,7 +88,7 @@ export const talkPosters: TalkPoster[] = [
 		title: "Artisan Squad",
 		venue: "Barcelona",
 		location: "Barcelona, Spain",
-		date: "01 · 13 · 2022",
+		date: "January 2022",
 		tone: "paper",
 		image: "/talks/Kang_Talk_Posters/2022-01-13_Barcelona_Artisan_Squad_Flyer.jpg"
 	}
