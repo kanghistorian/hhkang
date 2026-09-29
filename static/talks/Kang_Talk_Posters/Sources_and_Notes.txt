@@ -52,6 +52,7 @@ SECOND AUDIT — 27 September 2026 UTC
 Seven promotional files for six events: five JPG images and two PDFs.
 Added the two-page GW program flyer linked from the annual archive. Both pages visually inspected.
 PDF: https://emma-assets.s3.amazonaws.com/0oueb/3778505401aa4d15513b5e9478b9f1be/Hyeok_Hweon_Kang_Program_Flyer.pdf
+The two program pages were rendered as JPG files for display in the website poster archive; the original PDF remains alongside them.
 Replaced the GW calendar banner with the 1280 x 720 original from the institute archive. The source filename misleadingly names Isabelle Sancho, but visual inspection confirms that the graphic is for H. H. Kang.
 Image: https://gwiks.elliott.gwu.edu/files/2026/02/Premodern-Korea-Lecture-Series-with-Isabelle-Sanchos-1.jpg
 Archive: https://gwiks.elliott.gwu.edu/2025-2026-event-archive/
