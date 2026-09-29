@@ -48,9 +48,9 @@
 
 	<main>
 		<section class="border-y border-[#aeb4ae]/30 bg-[#d8d9d2] text-[#121212]">
-			<div class="mx-auto grid max-w-[1600px] lg:grid-cols-12">
+			<div class="mx-auto max-w-[1600px]">
 				{#each upcomingTalks as talk, i}
-					<div class="grid grid-cols-1 lg:grid-cols-12 {i > 0 ? 'border-t border-[#121212]/25' : ''}">
+					<div class="grid grid-cols-1 lg:grid-cols-12 {i > 0 ? \"border-t border-[#121212]/25\" : \"\"}">
 						<div
 							class="border-b border-[#121212]/25 p-8 md:p-12 lg:col-span-4 lg:border-r lg:border-b-0 lg:p-16"
 						>
