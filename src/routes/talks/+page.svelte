@@ -129,57 +129,38 @@
 		</section>
 
 		<section class="bg-[#20221f] px-8 py-24 md:px-12 lg:px-20 lg:py-36">
-			<div class="mx-auto max-w-[1600px] flex flex-col xl:flex-row gap-16">
-				<div class="flex-1">
-					<div class="mb-16 grid gap-6 lg:grid-cols-2 lg:items-end">
-						<h2 class="font-baskervville text-5xl text-[#e6e6e6] md:text-7xl">Poster archive</h2>
-						<p class="font-crimson max-w-md text-xl leading-snug lg:justify-self-end">
-							A visual record of past lectures, workshops, and conversations.
-						</p>
-					</div>
-					<div class="poster-grid grid gap-7 sm:grid-cols-2 xl:grid-cols-3">
-						{#each talkPosters as poster, i}
-							<article
-								onmouseenter={() => onMouseEnter(i)}
-								onmouseleave={() => onMouseLeave()}
-								class="poster poster--{poster.tone} flex aspect-[3/4] flex-col justify-between p-7 text-[#121212] shadow-2xl transition duration-500 hover:-translate-y-2 cursor-pointer"
-							>
-								<div
-									class="font-jws flex justify-between border-b border-current pb-3 text-[0.65rem] tracking-[0.2em]"
-								>
-									<span>H. H. KANG</span><span>0{i + 1}</span>
-								</div>
-								<h3
-									class="font-baskervville text-[clamp(2rem,3vw,3.6rem)] leading-[0.92] tracking-[-0.04em]"
-								>
-									{poster.title}
-								</h3>
-								<div class="border-t border-current pt-4">
-									<p class="font-jws text-[0.65rem] tracking-[0.16em]">{poster.venue}</p>
-									<p class="font-crimson mt-2 text-base leading-tight">{poster.location}</p>
-									<p class="font-baskervville mt-6 text-2xl">{poster.date}</p>
-								</div>
-							</article>
-						{/each}
-					</div>
+			<div class="mx-auto max-w-[1600px]">
+				<div class="mb-16 grid gap-6 lg:grid-cols-2 lg:items-end">
+					<h2 class="font-baskervville text-5xl text-[#e6e6e6] md:text-7xl">Poster archive</h2>
+					<p class="font-crimson max-w-md text-xl leading-snug lg:justify-self-end">
+						A visual record of past lectures, workshops, and conversations.
+					</p>
 				</div>
-				<div class="xl:w-1/3 relative flex items-center justify-center">
-					{#if selectedIndex !== -1}
-						<div
-							transition:fade={{ duration: 300 }}
-							class="relative aspect-[3/4] w-full max-w-md shadow-2xl overflow-hidden border-4 border-white/10"
+				<div class="poster-grid grid gap-7 sm:grid-cols-2 xl:grid-cols-4">
+					{#each talkPosters as poster, i}
+						<article
+							class="relative overflow-hidden flex aspect-[3/4] flex-col justify-between p-7 text-white shadow-2xl transition duration-500 hover:-translate-y-2"
+							style:background-image="url({poster.image})"
+							style:background-size="cover"
+							style:background-position="center"
 						>
-							<img
-								src={talkPosters[selectedIndex].image}
-								alt={talkPosters[selectedIndex].title}
-								class="w-full h-full object-cover"
-							/>
-						</div>
-					{:else}
-						<div class="aspect-[3/4] w-full max-w-md border-2 border-dashed border-[#aeb4ae]/20 flex items-center justify-center text-center p-8 opacity-30">
-							<p class="font-crimson italic text-xl">Hover over a poster to preview</p>
-						</div>
-					{/if}
+							<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
+							
+							<div class="relative z-10 font-jws flex justify-between border-b border-white/30 pb-3 text-[0.65rem] tracking-[0.2em]">
+								<span>H. H. KANG</span><span>0{i + 1}</span>
+							</div>
+							<h3
+								class="relative z-10 font-baskervville text-[clamp(2rem,3vw,3.6rem)] leading-[0.92] tracking-[-0.04em]"
+							>
+								{poster.title}
+							</h3>
+							<div class="relative z-10 border-t border-white/30 pt-4">
+								<p class="font-jws text-[0.65rem] tracking-[0.16em]">{poster.venue}</p>
+								<p class="font-crimson mt-2 text-base leading-tight">{poster.location}</p>
+								<p class="font-baskervville mt-6 text-2xl">{poster.date}</p>
+							</div>
+						</article>
+					{/each}
 				</div>
 			</div>
 		</section>
@@ -187,15 +168,6 @@
 </div>
 
 <style>
-	.poster--sage {
-		background: #aeb4ae;
-	}
-	.poster--clay {
-		background: #bd6e52;
-	}
-	.poster--paper {
-		background: #ded9cc;
-	}
 	.poster:nth-child(even) {
 		margin-top: 2.5rem;
 	}
