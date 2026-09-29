@@ -142,7 +142,7 @@
 							<article
 								onmouseenter={() => onMouseEnter(i)}
 								onmouseleave={() => onMouseLeave()}
-								class="poster poster--{poster.tone || 'paper'} flex aspect-[3/4] flex-col justify-between p-7 text-[#121212] shadow-2xl transition duration-500 hover:-translate-y-2 cursor-pointer"
+								class="poster poster--{poster.tone} flex aspect-[3/4] flex-col justify-between p-7 text-[#121212] shadow-2xl transition duration-500 hover:-translate-y-2 cursor-pointer"
 							>
 								<div
 									class="font-jws flex justify-between border-b border-current pb-3 text-[0.65rem] tracking-[0.2em]"
@@ -155,9 +155,9 @@
 									{poster.title}
 								</h3>
 								<div class="border-t border-current pt-4">
-									<p class="font-jws text-[0.65rem] tracking-[0.16em]">{poster.year}</p>
-									<p class="font-crimson mt-2 text-base leading-tight">{poster.description || ''}</p>
-									<p class="font-baskervville mt-6 text-2xl">{poster.year}</p>
+									<p class="font-jws text-[0.65rem] tracking-[0.16em]">{poster.venue}</p>
+									<p class="font-crimson mt-2 text-base leading-tight">{poster.location}</p>
+									<p class="font-baskervville mt-6 text-2xl">{poster.date}</p>
 								</div>
 							</article>
 						{/each}
