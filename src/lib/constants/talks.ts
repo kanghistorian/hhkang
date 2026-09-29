@@ -54,7 +54,7 @@ export const recordedTalks: RecordedTalk[] = [
 	}
 ];
 
-export const talksPosters: TalksPoster[] = [
+export const talkPosters: TalksPoster[] = [
 	{
 		title: 'George Washington University',
 		year: '2026',
