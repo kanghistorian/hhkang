@@ -144,7 +144,7 @@
 							style:background-size="cover"
 							style:background-position="center"
 						>
-							<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
+							<div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/55"></div>
 							
 							<div class="relative z-10 font-jws flex justify-between border-b border-white/30 pb-3 text-[0.65rem] tracking-[0.2em]">
 								<span>H. H. KANG</span><span>0{i + 1}</span>
