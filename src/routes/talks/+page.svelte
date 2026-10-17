@@ -114,8 +114,8 @@
 								<h3 class="font-baskervville text-xl leading-tight tracking-tight mb-2">
 									{poster.title}
 								</h3>
-								<p class="font-jws text-[0.65rem] tracking-[0.16em]">{poster.venue}</p>
-								<p class="font-crimson mt-1 text-sm leading-tight">{poster.location}</p>
+								<p class="font-jws text-[0.65rem] tracking-[0.16em]">{poster.series}</p>
+								<p class="font-crimson mt-1 text-sm leading-tight">{poster.institution}</p>
 								<p class="font-baskervville mt-4 text-xl">{poster.date}</p>
 							</div>
 						</article>
