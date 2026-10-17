@@ -1,7 +1,6 @@
 <script lang="ts">
 	import CloseIcon from "$lib/icons/CloseIcon.svelte";
 	import MenuIcon from "$lib/icons/MenuIcon.svelte";
-	import { onDestroy } from "svelte";
 	import TextSlideY from "../effects/TextSlideY.svelte";
 	import TextSlideX from "../effects/TextSlideX.svelte";
 
@@ -19,26 +18,33 @@
 		stagger?: boolean;
 	} = $props();
 
-	let sidebarOpen: boolean = $state(false);
-	let sidebarFont: string = $state("0px");
+	let sidebarOpen = $state(false);
+	let mobileMenu: HTMLDialogElement;
 
-	function sidebarClick() {
-		if (sidebarOpen) {
-			sidebarOpen = false;
-			setTimeout(() => {
-				sidebarFont = "0px";
-			}, 300);
-		} else {
-			sidebarOpen = true;
-			sidebarFont = "1.5rem";
-		}
+	function closeMenu() {
+		mobileMenu.close();
 	}
 
-	const staggerAmount: number = stagger ? 0 : 100;
+	function openMenu() {
+		mobileMenu.showModal();
+		sidebarOpen = true;
+	}
 
-	onDestroy(() => {
-		sidebarOpen = false;
+	const staggerAmount = $derived(stagger ? 0 : 100);
+
+	$effect(() => {
+		if (!sidebarOpen) return;
+		const previousOverflow = document.body.style.overflow;
+		document.body.style.overflow = "hidden";
+		const desktop = window.matchMedia("(min-width: 1024px)");
+		const onResize = () => { if (desktop.matches) closeMenu(); };
+		desktop.addEventListener("change", onResize);
+		return () => {
+			document.body.style.overflow = previousOverflow;
+			desktop.removeEventListener("change", onResize);
+		};
 	});
+
 </script>
 
 {#if cutoff}
@@ -48,44 +54,35 @@
 	></div>
 {/if}
 
-<div
-	class="text-jws absolute top-0 right-0 z-40 flex h-screen flex-col items-center justify-center
-          space-y-8 text-2xl transition-[width] duration-1000 ease-out select-none lg:hidden"
-	style:width={sidebarOpen ? "100vw" : "0vw"}
+<dialog
+	bind:this={mobileMenu}
+	id="mobile-navigation"
+	aria-label="Main navigation"
+	onclose={() => { sidebarOpen = false; }}
+	class="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none border-0 p-0 backdrop:bg-black/50"
 	style:background-color={backgroundColor}
 	style:color={overlayColor}
-	style:font-size={sidebarFont}
 >
-	<a aria-label="About" href="/about" rel="noopener noreferrer">
-		<TextSlideX text={"ABOUT"} load={sidebarOpen} />
-	</a>
-	<a aria-label="Research" href="/works" rel="noopener noreferrer">
-		<TextSlideX text={"RESEARCH"} load={sidebarOpen} />
-	</a>
-	<a aria-label="Teaching" href="/teaching" rel="noopener noreferrer">
-		<TextSlideX text={"TEACHING"} load={sidebarOpen} />
-	</a>
-	<a aria-label="Talks" href="/talks" rel="noopener noreferrer">
-		<TextSlideX text={"TALKS"} load={sidebarOpen} />
-	</a>
-	<a aria-label="Gallery" href="/gallery" rel="noopener noreferrer">
-		<TextSlideX text={"GALLERY"} load={sidebarOpen} />
-	</a>
-</div>
+	<button type="button" aria-label="Close navigation" onclick={closeMenu}
+		class="absolute top-[22px] right-[22px] flex min-h-11 min-w-11 items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-4">
+		<CloseIcon {overlayColor} />
+	</button>
+	<nav aria-label="Mobile" class="font-jws flex min-h-full flex-col items-center justify-center gap-4 px-8 py-24 text-2xl">
+		{#each [{ label: "About", href: "/about" }, { label: "Research", href: "/works" }, { label: "Teaching", href: "/teaching" }, { label: "Talks", href: "/talks" }, { label: "Gallery", href: "/gallery" }] as item}
+			<a aria-label={item.label} href={item.href} onclick={closeMenu}
+				class="flex min-h-11 items-center px-4 focus-visible:outline-2 focus-visible:outline-offset-4">
+				<TextSlideX text={item.label.toUpperCase()} load={sidebarOpen} />
+			</a>
+		{/each}
+	</nav>
+</dialog>
 
-<div
-	class="absolute top-8 right-8 z-50 flex items-end transition-colors duration-1000
-         ease-out select-none lg:hidden"
->
-	{#if sidebarOpen}
-		<button onclick={() => sidebarClick()}>
-			<CloseIcon {overlayColor} />
-		</button>
-	{:else}
-		<button onclick={() => sidebarClick()}>
-			<MenuIcon {overlayColor} />
-		</button>
-	{/if}
+<div class="absolute top-[22px] right-[22px] z-50 lg:hidden">
+	<button type="button" aria-label="Open navigation" aria-expanded={sidebarOpen}
+		aria-controls="mobile-navigation" onclick={openMenu}
+		class="flex min-h-11 min-w-11 items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-4">
+		<MenuIcon {overlayColor} />
+	</button>
 </div>
 
 <div

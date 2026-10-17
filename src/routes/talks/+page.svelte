@@ -31,7 +31,7 @@
 				>
 					<TextSlideY text="Talks" center={false} distance="3rem" />
 				</h1>
-				<p class="font-crimson mt-7 max-w-2xl text-xl leading-relaxed md:text-2xl">Selected lectures and presentations by H. H. Kang</p>
+				<p class="font-crimson mt-7 max-w-2xl text-xl leading-relaxed md:text-2xl">Selected lectures and presentations by <span class="whitespace-nowrap">H. H. Kang</span></p>
 			</div>
 		</div>
 	</header>
@@ -50,7 +50,7 @@
 								<img src={talk.image} alt={talk.title} class="mt-4 h-auto max-w-full md:max-w-xs" />
 							{/if}
 							{#if talk.href}
-								<a href={talk.href} target="_blank" rel="noreferrer" class="font-jws mt-4 inline-block text-xs tracking-[0.12em] underline decoration-[#49544c]/40 underline-offset-4 hover:decoration-current focus-visible:outline-2 focus-visible:outline-offset-4">View event details ↗</a>
+								<a href={talk.href} target="_blank" rel="noreferrer" class="font-jws mt-4 inline-flex min-h-11 items-center py-3 text-xs tracking-[0.12em] underline decoration-[#49544c]/40 underline-offset-4 hover:decoration-current focus-visible:outline-2 focus-visible:outline-offset-4">View event details ↗</a>
 							{:else}
 								<p class="font-crimson mt-4 text-sm italic text-[#49544c]">Event details forthcoming.</p>
 							{/if}
@@ -72,7 +72,7 @@
 						<div>
 							<h3 class="font-baskervville max-w-3xl text-2xl leading-[1.15] tracking-[-0.02em] text-[#e6e6e6] md:text-3xl lg:text-4xl">{talk.title}</h3>
 							<p class="font-crimson mt-3 text-lg leading-relaxed">{talk.venue}</p>
-							<a href={talk.href} target="_blank" rel="noreferrer" class="font-jws mt-5 inline-block text-xs tracking-[0.12em] text-[#d8d9d2] underline decoration-[#aeb4ae]/50 underline-offset-4 hover:decoration-current focus-visible:outline-2 focus-visible:outline-offset-4">{talk.href.includes('/results?') ? 'Find on YouTube' : 'Watch recording'} ↗</a>
+							<a href={talk.href} target="_blank" rel="noreferrer" class="font-jws mt-5 inline-flex min-h-11 items-center py-3 text-xs tracking-[0.12em] text-[#d8d9d2] underline decoration-[#aeb4ae]/50 underline-offset-4 hover:decoration-current focus-visible:outline-2 focus-visible:outline-offset-4">{talk.href.includes('/results?') ? 'Find on YouTube' : 'Watch recording'} ↗</a>
 						</div>
 						<a href={talk.href} target="_blank" rel="noreferrer" aria-label={'View ' + talk.title} class="block w-full max-w-xs overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-4">
 							<img src={talk.image} alt="" loading="lazy" class="aspect-video w-full object-cover opacity-80 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
@@ -93,7 +93,7 @@
 				<div class="poster-grid grid gap-7 sm:grid-cols-2 xl:grid-cols-4">
 					{#each talkPosters as poster, i}
 						<article
-							class="poster poster--{poster.tone} flex aspect-[3/4] flex-col justify-between p-7 text-[#121212] shadow-2xl transition duration-500 hover:-translate-y-2"
+							class="poster poster--{poster.tone} flex aspect-auto min-w-0 gap-6 sm:aspect-[3/4] sm:gap-0 flex-col justify-between p-7 text-[#121212] shadow-2xl transition duration-500 hover:-translate-y-2"
 						>
 							<div
 								class="font-jws flex justify-end border-b border-current pb-3 text-[0.65rem] tracking-[0.2em]"
@@ -101,7 +101,7 @@
 								<span>0{i + 1}</span>
 							</div>
 
-							<div class="flex items-center justify-center my-0">
+							<div class="poster-image flex min-w-0 items-center justify-center my-0">
 								<img
 									src={poster.image}
 									alt={poster.title}
@@ -113,8 +113,8 @@
 								<h3 class="font-baskervville text-xl leading-tight tracking-tight mb-2">
 									{poster.title}
 								</h3>
-								<p class="font-jws text-[0.65rem] tracking-[0.16em]">{poster.series}</p>
-								<p class="font-crimson mt-1 text-sm leading-tight">{poster.institution}</p>
+								<p class="font-jws text-xs leading-relaxed tracking-[0.1em] sm:text-[0.65rem] sm:leading-normal sm:tracking-[0.16em]">{poster.series}</p>
+								<p class="font-crimson mt-2 text-base leading-snug sm:mt-1 sm:text-sm sm:leading-tight">{poster.institution}</p>
 								<p class="font-baskervville mt-4 text-xl">{poster.date}</p>
 							</div>
 						</article>
@@ -139,6 +139,15 @@
 		margin-top: 2.5rem;
 	}
 	@media (max-width: 639px) {
+		.poster {
+			width: 100%;
+			overflow-wrap: anywhere;
+		}
+		.poster-image img {
+			max-width: 100%;
+			height: auto;
+			max-height: none;
+		}
 		.poster:nth-child(even) {
 			margin-top: 0;
 		}
