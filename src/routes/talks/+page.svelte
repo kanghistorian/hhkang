@@ -3,20 +3,10 @@
 	import Tabs from "$lib/components/overlay/Tabs.svelte";
 	import TextSlideY from "$lib/components/effects/TextSlideY.svelte";
 	import { upcomingTalks, recordedTalks, talkPosters } from "$lib/constants/talks";
-	import { fade } from "svelte/transition";
 
 	const ink = "#121212";
 	const mist = "#aeb4ae";
 
-	let selectedIndex: number = $state(-1);
-
-	function onMouseEnter(index: number) {
-		selectedIndex = index;
-	}
-
-	function onMouseLeave() {
-		selectedIndex = -1;
-	}
 </script>
 
 <svelte:head>
@@ -32,100 +22,65 @@
 	<Tabs overlayColor={mist} backgroundColor={ink} />
 
 	<header
-		class="mx-auto flex min-h-[68vh] max-w-[1600px] items-end px-8 pt-36 pb-16 md:px-12 lg:px-20 lg:pb-24"
+		class="mx-auto max-w-[1600px] px-8 pt-36 pb-12 md:px-12 md:pt-40 lg:px-20 lg:pb-16"
 	>
 		<div class="grid w-full gap-8 lg:grid-cols-12 lg:items-end">
 			<div class="lg:col-span-12">
 				<p class="font-jws mb-5 text-xs tracking-[0.3em]">LECTURES · CONVERSATIONS · COLLOQUIA</p>
 				<h1
-					class="font-baskervville text-[clamp(5rem,15vw,14rem)] leading-[0.68] font-normal tracking-[-0.07em] text-[#e6e6e6]"
+					class="font-baskervville text-[clamp(4rem,8vw,8rem)] leading-[0.9] font-normal tracking-[-0.07em] text-[#e6e6e6]"
 				>
-					<TextSlideY text="Talks" center={false} distance="5rem" />
+					<TextSlideY text="Talks" center={false} distance="3rem" />
 				</h1>
+				<p class="font-crimson mt-7 max-w-2xl text-xl leading-relaxed md:text-2xl">Selected lectures and conversations on Korean history, material culture, and the sciences of making.</p>
 			</div>
 		</div>
 	</header>
 
 	<main>
-		<section class="border-y border-[#aeb4ae]/30 bg-[#d8d9d2] text-[#121212]">
-			<div class="mx-auto max-w-[1600px]">
+		<section aria-labelledby="upcoming-heading" class="border-y border-[#aeb4ae]/30 bg-[#d8d9d2] text-[#121212]">
+			<div class="mx-auto max-w-[1600px] px-8 py-8 md:px-12 lg:px-20 lg:py-10">
+				<h2 id="upcoming-heading" class="font-jws mb-6 text-xs tracking-[0.24em]">UPCOMING</h2>
 				{#each upcomingTalks as talk, i}
-					<div class="grid grid-cols-1 lg:grid-cols-12 {i > 0 ? 'border-t border-[#121212]/25' : ''}">
-						<div
-							class="border-b border-[#121212]/25 p-4 md:p-6 lg:col-span-4 lg:border-r lg:border-b-0 lg:p-8"
-						>
-							<p class="font-jws text-xs tracking-[0.28em]">UPCOMING</p>
-							<p class="font-crimson mt-12 text-sm italic lg:mt-24">{talk.date}</p>
-							
+					<article class="grid gap-3 py-6 md:grid-cols-[9rem_minmax(0,1fr)] md:gap-8 {i > 0 ? 'border-t border-[#121212]/20' : ''}">
+						<p class="font-crimson text-base italic text-[#49544c] md:pt-1">{talk.date}</p>
+						<div class="max-w-4xl">
+							<h3 class="font-baskervville text-2xl leading-[1.15] tracking-[-0.02em] md:text-3xl lg:text-4xl">{talk.title}</h3>
+							<p class="font-crimson mt-3 text-lg leading-relaxed text-[#49544c]">{talk.venue}</p>
 							{#if talk.image}
-								<div class="mt-4 overflow-hidden border border-[#121212]/20 shadow-sm">
-									<img src={talk.image} alt={talk.title} class="w-full h-auto grayscale" />
-								</div>
+								<img src={talk.image} alt={talk.title} class="mt-4 h-auto max-w-full md:max-w-xs" />
+							{/if}
+							{#if talk.href}
+								<a href={talk.href} target="_blank" rel="noreferrer" class="font-jws mt-4 inline-block text-xs tracking-[0.12em] underline decoration-[#49544c]/40 underline-offset-4 hover:decoration-current focus-visible:outline-2 focus-visible:outline-offset-4">View event details ↗</a>
+							{:else}
+								<p class="font-crimson mt-4 text-sm italic text-[#49544c]">Event details forthcoming.</p>
 							{/if}
 						</div>
-						<div class="p-4 md:p-6 lg:col-span-8 lg:p-8">
-							<p class="font-jws text-xs tracking-[0.24em]">{talk.venue.toUpperCase()}</p>
-							<h2
-								class="font-baskervville mt-6 max-w-4xl text-2xl leading-[0.95] tracking-[-0.04em] md:text-4xl xl:text-5xl"
-							>
-								{talk.title}
-							</h2>
-							<div
-								class="font-crimson mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-[#121212]/35 pt-3 text-sm"
-							>
-								{#if talk.href}
-									<a href={talk.href} target="_blank" rel="noreferrer" class="hover:underline underline-offset-4">
-										View event details
-									</a>
-								{:else}
-									<p>Details to be announced shortly.</p>
-								{/if}
-								<span aria-hidden="true" class="text-2xl">↗</span>
-							</div>
-						</div>
-					</div>
+					</article>
 				{/each}
 			</div>
 		</section>
 
-		<section class="mx-auto max-w-[1600px] px-8 py-24 md:px-12 lg:px-20 lg:py-36">
-			<div class="mb-14 flex items-end justify-between border-b border-[#aeb4ae]/30 pb-5">
-				<h2 class="font-baskervville text-5xl text-[#e6e6e6] md:text-7xl">Watch</h2>
-				<p class="font-jws text-xs tracking-[0.25em]">{recordedTalks.length} SELECTED TALKS</p>
+		<section aria-labelledby="recordings-heading" class="mx-auto max-w-[1600px] px-8 py-14 md:px-12 lg:px-20 lg:py-20">
+			<div class="mb-4 flex flex-wrap items-baseline justify-between gap-4 border-b border-[#aeb4ae]/30 pb-5">
+				<h2 id="recordings-heading" class="font-baskervville text-4xl text-[#e6e6e6] md:text-5xl">Watch</h2>
+				<p class="font-jws text-xs tracking-[0.2em]">SELECTED RECORDINGS</p>
 			</div>
-			<div class="grid gap-12 lg:grid-cols-2 lg:gap-7">
-				{#each recordedTalks as talk, i}
-					<a class="video-card group block" href={talk.href} target="_blank" rel="noreferrer">
-						<div class="relative aspect-video overflow-hidden bg-[#292b29]">
-							<img
-								src={talk.image}
-								alt=""
-								class="h-full w-full object-cover opacity-70 grayscale transition duration-700 group-hover:scale-[1.03] group-hover:opacity-90 group-hover:grayscale-0"
-							/>
-							<div
-								class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent"
-							></div>
-							<div
-								class="absolute bottom-6 left-6 flex h-16 w-16 items-center justify-center rounded-full border border-white/70 bg-black/20 text-xl text-white backdrop-blur-sm transition group-hover:bg-[#d8d9d2] group-hover:text-black"
-							>
-								<span class="ml-1">▶</span>
-							</div>
-							<span class="font-jws absolute top-5 right-5 text-xs tracking-[0.2em] text-white"
-								>0{i + 1}</span
-							>
+			{#each recordedTalks as talk, i}
+				<article class="grid gap-4 py-8 md:grid-cols-[9rem_minmax(0,1fr)] md:gap-8 {i > 0 ? 'border-t border-[#aeb4ae]/20' : ''}">
+					<p class="font-crimson text-base italic md:pt-1">{talk.year.length === 4 ? talk.year : 'Selected lecture'}</p>
+					<div class="grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_14rem] xl:gap-10">
+						<div>
+							<h3 class="font-baskervville max-w-3xl text-2xl leading-[1.15] tracking-[-0.02em] text-[#e6e6e6] md:text-3xl lg:text-4xl">{talk.title}</h3>
+							<p class="font-crimson mt-3 text-lg leading-relaxed">{talk.venue}</p>
+							<a href={talk.href} target="_blank" rel="noreferrer" class="font-jws mt-5 inline-block text-xs tracking-[0.12em] text-[#d8d9d2] underline decoration-[#aeb4ae]/50 underline-offset-4 hover:decoration-current focus-visible:outline-2 focus-visible:outline-offset-4">{talk.href.includes('/results?') ? 'Find on YouTube' : 'Watch recording'} ↗</a>
 						</div>
-						<div class="grid grid-cols-[1fr_auto] gap-5 border-b border-[#aeb4ae]/30 py-6">
-							<div>
-								<h3 class="font-crimson text-2xl leading-tight text-[#e6e6e6] md:text-3xl">
-									{talk.title}
-								</h3>
-								<p class="font-jws mt-3 text-xs tracking-[0.14em]">{talk.venue}</p>
-							</div>
-							<p class="font-crimson text-lg italic">{talk.year}</p>
-						</div>
-					</a>
-				{/each}
-			</div>
+						<a href={talk.href} target="_blank" rel="noreferrer" aria-label={'View ' + talk.title} class="block w-full max-w-xs overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-4">
+							<img src={talk.image} alt="" loading="lazy" class="aspect-video w-full object-cover opacity-80 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+						</a>
+					</div>
+				</article>
+			{/each}
 		</section>
 
 		<section class="bg-[#20221f] px-8 py-24 md:px-12 lg:px-20 lg:py-36">
