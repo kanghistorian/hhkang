@@ -47,7 +47,7 @@ img {
 @layer base {
   @font-face {
     font-family: 'Baskervville';
-    src: url('/fonts/baskervville/Baskervville-VariableFont_wght.ttf') format('truetype');
+    src: url('/fonts/baskervville/HHKangSerif-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }

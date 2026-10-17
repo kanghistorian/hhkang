@@ -1,13 +1,12 @@
 <script lang="ts">
-	import CloseIcon from '$lib/icons/CloseIcon.svelte';
-	import MenuIcon from '$lib/icons/MenuIcon.svelte';
-	import { onDestroy } from 'svelte';
-	import TextSlideY from '../effects/TextSlideY.svelte';
-	import TextSlideX from '../effects/TextSlideX.svelte';
+	import CloseIcon from "$lib/icons/CloseIcon.svelte";
+	import MenuIcon from "$lib/icons/MenuIcon.svelte";
+	import TextSlideY from "../effects/TextSlideY.svelte";
+	import TextSlideX from "../effects/TextSlideX.svelte";
 
 	let {
-		overlayColor = '#aeb4ae',
-		backgroundColor = '#121212',
+		overlayColor = "#aeb4ae",
+		backgroundColor = "#121212",
 		cutoff = false,
 		delay = 0,
 		stagger = false
@@ -19,87 +18,92 @@
 		stagger?: boolean;
 	} = $props();
 
-	let sidebarOpen: boolean = $state(false);
-	let sidebarFont: string = $state('0px');
+	let sidebarOpen = $state(false);
+	let mobileMenu: HTMLDialogElement;
 
-	function sidebarClick() {
-		if (sidebarOpen) {
-			sidebarOpen = false;
-			setTimeout(() => {
-				sidebarFont = '0px';
-			}, 300);
-		} else {
-			sidebarOpen = true;
-			sidebarFont = '1.5rem';
-		}
+	function closeMenu() {
+		mobileMenu.close();
 	}
 
-	const staggerAmount: number = stagger ? 0 : 100;
+	function openMenu() {
+		mobileMenu.showModal();
+		sidebarOpen = true;
+	}
 
-	onDestroy(() => {
-		sidebarOpen = false;
+	const staggerAmount = $derived(stagger ? 0 : 100);
+
+	$effect(() => {
+		if (!sidebarOpen) return;
+		const previousOverflow = document.body.style.overflow;
+		document.body.style.overflow = "hidden";
+		const desktop = window.matchMedia("(min-width: 1024px)");
+		const onResize = () => { if (desktop.matches) closeMenu(); };
+		desktop.addEventListener("change", onResize);
+		return () => {
+			document.body.style.overflow = previousOverflow;
+			desktop.removeEventListener("change", onResize);
+		};
 	});
+
 </script>
 
 {#if cutoff}
 	<div
-		class="w-screen h-24 fixed top-0 left-0 z-30 bg-[rgba(255, 255, 255, 0.20)]
+		class="bg-[rgba(255, 255, 255, 0.20)] fixed top-0 left-0 z-30 h-24 w-screen
           backdrop-blur-[2px]"
 	></div>
 {/if}
 
-<div
-	class="absolute top-0 right-0 select-none flex flex-col lg:hidden items-center h-screen text-2xl
-          justify-center z-40 transition-[width] duration-1000 ease-out text-jws space-y-8"
-	style:width={sidebarOpen ? '100vw' : '0vw'}
+<dialog
+	bind:this={mobileMenu}
+	id="mobile-navigation"
+	aria-label="Main navigation"
+	onclose={() => { sidebarOpen = false; }}
+	class="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none border-0 p-0 backdrop:bg-black/50"
 	style:background-color={backgroundColor}
 	style:color={overlayColor}
-	style:font-size={sidebarFont}
 >
-	<a aria-label="About" href="/about" rel="noopener noreferrer">
-		<TextSlideX text={'ABOUT'} load={sidebarOpen} />
-	</a>
-	<a aria-label="Teaching" href="/teaching" rel="noopener noreferrer">
-		<TextSlideX text={'TEACHING'} load={sidebarOpen} />
-	</a>
-	<a aria-label="Gallery" href="/gallery" rel="noopener noreferrer">
-		<TextSlideX text={'GALLERY'} load={sidebarOpen} />
-	</a>
-	<a aria-label="Works" href="/works" rel="noopener noreferrer">
-		<TextSlideX text={'WORKS'} load={sidebarOpen} />
-	</a>
+	<button type="button" aria-label="Close navigation" onclick={closeMenu}
+		class="absolute top-[22px] right-[22px] flex min-h-11 min-w-11 items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-4">
+		<CloseIcon {overlayColor} />
+	</button>
+	<nav aria-label="Mobile" class="font-jws flex min-h-full flex-col items-center justify-center gap-4 px-8 py-24 text-2xl">
+		{#each [{ label: "About", href: "/about" }, { label: "Research", href: "/works" }, { label: "Teaching", href: "/teaching" }, { label: "Talks", href: "/talks" }, { label: "Gallery", href: "/gallery" }] as item}
+			<a aria-label={item.label} href={item.href} onclick={closeMenu}
+				class="flex min-h-11 items-center px-4 focus-visible:outline-2 focus-visible:outline-offset-4">
+				<TextSlideX text={item.label.toUpperCase()} load={sidebarOpen} />
+			</a>
+		{/each}
+	</nav>
+</dialog>
+
+<div class="absolute top-[22px] right-[22px] z-50 lg:hidden">
+	<button type="button" aria-label="Open navigation" aria-expanded={sidebarOpen}
+		aria-controls="mobile-navigation" onclick={openMenu}
+		class="flex min-h-11 min-w-11 items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-4">
+		<MenuIcon {overlayColor} />
+	</button>
 </div>
 
 <div
-	class="absolute top-8 right-8 select-none flex lg:hidden items-end z-50
-         transition-colors duration-1000 ease-out"
->
-	{#if sidebarOpen}
-		<button onclick={() => sidebarClick()}>
-			<CloseIcon {overlayColor} />
-		</button>
-	{:else}
-		<button onclick={() => sidebarClick()}>
-			<MenuIcon {overlayColor} />
-		</button>
-	{/if}
-</div>
-
-<div
-	class="absolute font-jws text-md space-x-12 text-sm 2xl:text-base top-8 2xl:top-12 right-12 select-none hidden
-        lg:flex items-end leading-4 z-50 transition-colors duration-1000 ease-out"
+	class="font-jws text-md absolute top-8 right-12 z-50 hidden items-end space-x-12 text-sm leading-4
+        transition-colors duration-1000 ease-out select-none lg:flex 2xl:top-12 2xl:text-base"
 	style:color={overlayColor}
 >
 	<a aria-label="About" href="/about" rel="noopener noreferrer">
-		<TextSlideY text={'ABOUT'} {delay} />
+		<TextSlideY text={"ABOUT"} {delay} />
+	</a>
+	<a aria-label="Research" href="/works" rel="noopener noreferrer">
+		<TextSlideY text={"RESEARCH"} delay={delay + staggerAmount * 1} />
 	</a>
 	<a aria-label="Teaching" href="/teaching" rel="noopener noreferrer">
-		<TextSlideY text={'TEACHING'} delay={delay + staggerAmount * 2} />
+		<TextSlideY text={"TEACHING"} delay={delay + staggerAmount * 2} />
+	</a>
+	<a aria-label="Talks" href="/talks" rel="noopener noreferrer">
+		<TextSlideY text={"TALKS"} delay={delay + staggerAmount * 3} />
 	</a>
 	<a aria-label="Gallery" href="/gallery" rel="noopener noreferrer">
-		<TextSlideY text={'GALLERY'} delay={delay + staggerAmount * 1} />
-	</a>
-	<a aria-label="Works" href="/works" rel="noopener noreferrer">
-		<TextSlideY text={'WORKS'} delay={delay + staggerAmount * 3} />
+		<TextSlideY text={"GALLERY"} delay={delay + staggerAmount * 4} />
 	</a>
 </div>
+

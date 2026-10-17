@@ -1,35 +1,37 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import TextSlideY from '../effects/TextSlideY.svelte';
-	import TextSlideX from '../effects/TextSlideX.svelte';
-	import { sineOut } from 'svelte/easing';
-	import { slide } from 'svelte/transition';
-	import CourseType from './CourseType.svelte';
-	import ImageCitation from './ImageCitation.svelte';
+	import { onMount } from "svelte";
+	import TextSlideY from "../effects/TextSlideY.svelte";
+	import TextSlideX from "../effects/TextSlideX.svelte";
+	import { sineOut } from "svelte/easing";
+	import { slide } from "svelte/transition";
+	import CourseType from "./CourseType.svelte";
+	import ImageCitation from "./ImageCitation.svelte";
 
 	let {
 		color,
 		leftField,
 		rightField,
-		customLabel = 'EXPLORE',
+		customLabel = "EXPLORE",
+		invert = false,
 		path
 	}: {
 		color: string;
 		leftField: string;
 		rightField: string;
 		customLabel?: string;
+		invert?: boolean;
 		path?: string;
 	} = $props();
 
-	let lineHeight: string = $state('0px');
-	let lineWidth: string = $state('0px');
+	let lineHeight: string = $state("0px");
+	let lineWidth: string = $state("0px");
 	let visible: boolean = $state(false);
 
 	onMount(() => {
 		visible = true;
 		setTimeout(() => {
-			lineWidth = '100%';
-			lineHeight = '2rem';
+			lineWidth = "100%";
+			lineHeight = "2rem";
 		}, 500);
 	});
 </script>
@@ -61,7 +63,7 @@
 
 {#snippet explore()}
 	<a
-		href={path ? path : '/#'}
+		href={path ? path : "/#"}
 		class="flex flex-col items-end text-xs leading-3 cursor-pointer select-none"
 	>
 		<TextSlideX text={customLabel} letterDelay={50} />
