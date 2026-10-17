@@ -49,8 +49,8 @@ export const recordedTalks: RecordedTalk[] = [
 		title: "Sciences of Making in Chosŏn Korea",
 		venue: "Premodern Korean Lecture Series · Institute for Korea Studies, George Washington University",
 		year: "2026",
-		href: "https://www.youtube.com/results?search_query=Hyeok+Hweon+Kang",
-		image: "/reverse_engineering.png"
+		href: "https://www.youtube.com/watch?v=Dv_ZLRERC2w&t=2s",
+		image: "https://i.ytimg.com/vi/Dv_ZLRERC2w/hqdefault.jpg"
 	}
 ];
 
