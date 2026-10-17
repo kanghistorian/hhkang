@@ -26,13 +26,12 @@
 	>
 		<div class="grid w-full gap-8 lg:grid-cols-12 lg:items-end">
 			<div class="lg:col-span-12">
-				<p class="font-jws mb-5 text-xs tracking-[0.3em]">LECTURES · CONVERSATIONS · COLLOQUIA</p>
 				<h1
-					class="font-baskervville text-[clamp(4rem,8vw,8rem)] leading-[0.9] font-normal tracking-[-0.07em] text-[#e6e6e6]"
+					class="font-baskervville text-[clamp(3.5rem,6vw,6.5rem)] leading-[0.9] font-normal tracking-[-0.07em] text-[#e6e6e6]"
 				>
 					<TextSlideY text="Talks" center={false} distance="3rem" />
 				</h1>
-				<p class="font-crimson mt-7 max-w-2xl text-xl leading-relaxed md:text-2xl">Selected lectures and conversations on Korean history, material culture, and the sciences of making.</p>
+				<p class="font-crimson mt-7 max-w-2xl text-xl leading-relaxed md:text-2xl">Selected lectures and presentations by H. H. Kang</p>
 			</div>
 		</div>
 	</header>
