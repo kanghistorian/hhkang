@@ -40,15 +40,15 @@ export const upcomingTalks: UpcomingTalk[] = [
 export const recordedTalks: RecordedTalk[] = [
 	{
 		title: "The Wicked Factory? Artisans, Ethics, and Reform in Sixteenth-Century Chosŏn",
-		venue: "Korean Treasures at Harvard · Korea Institute",
+		venue: "Korean Treasures at Harvard · Korea Institute, Harvard University",
 		year: "2025",
 		href: "https://www.youtube.com/watch?v=qXIt5WNpqWs",
 		image: "https://i.ytimg.com/vi/qXIt5WNpqWs/hqdefault.jpg"
 	},
 	{
 		title: "Sciences of Making in Chosŏn Korea",
-		venue: "Selected lecture · H. H. Kang",
-		year: "Watch on YouTube",
+		venue: "Premodern Korean Lecture Series · Institute for Korea Studies, George Washington University",
+		year: "2026",
 		href: "https://www.youtube.com/results?search_query=Hyeok+Hweon+Kang",
 		image: "/reverse_engineering.png"
 	}
