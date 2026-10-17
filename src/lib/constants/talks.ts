@@ -1,4 +1,6 @@
 export interface UpcomingTalk {
+	/** ISO year-month (YYYY-MM), used to show the soonest event first. */
+	startDate: string;
 	title: string;
 	venue: string;
 	date: string;
@@ -23,19 +25,26 @@ export interface TalkPoster {
 	image: string;
 }
 
-export const upcomingTalks: UpcomingTalk[] = [
+const upcomingTalkEntries: UpcomingTalk[] = [
 	{
 		title: "Premodern Korean Studies in the Age of AI",
 		venue: "Tateuchi East Asia Library (TEAL) Digital Scholarship Series, University of Washington",
-		date: "TBD",
+		date: "February 2027",
+		startDate: "2027-02",
 	},
 	{
 		title: "By Virtue of Craft: Sciences of Making in Chosŏn Korea",
 		venue: "Emerging Scholars Speakers Initiative Program, Asia in Depth Series, hosted by Asian Studies Program, History Department, and the School of Foreign Service, Georgetown University",
 		date: "October 2026",
+		startDate: "2026-10",
 		href: "https://history.georgetown.edu/gigh/asiaindepth/",
 	}
 ];
+
+// Sort machine-readable dates rather than relying on entry order or display labels.
+export const upcomingTalks: UpcomingTalk[] = [...upcomingTalkEntries].sort((a, b) =>
+	a.startDate.localeCompare(b.startDate)
+);
 
 export const recordedTalks: RecordedTalk[] = [
 	{
