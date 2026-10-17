@@ -52,26 +52,26 @@
 				{#each upcomingTalks as talk, i}
 					<div class="grid grid-cols-1 lg:grid-cols-12 {i > 0 ? 'border-t border-[#121212]/25' : ''}">
 						<div
-							class="border-b border-[#121212]/25 p-8 md:p-12 lg:col-span-4 lg:border-r lg:border-b-0 lg:p-16"
+							class="border-b border-[#121212]/25 p-4 md:p-6 lg:col-span-4 lg:border-r lg:border-b-0 lg:p-8"
 						>
 							<p class="font-jws text-xs tracking-[0.28em]">UPCOMING</p>
-							<p class="font-crimson mt-24 text-lg italic lg:mt-48">{talk.date}</p>
+							<p class="font-crimson mt-12 text-sm italic lg:mt-24">{talk.date}</p>
 							
 							{#if talk.image}
-								<div class="mt-8 overflow-hidden border border-[#121212]/20 shadow-sm">
+								<div class="mt-4 overflow-hidden border border-[#121212]/20 shadow-sm">
 									<img src={talk.image} alt={talk.title} class="w-full h-auto grayscale" />
 								</div>
 							{/if}
 						</div>
-						<div class="p-8 md:p-12 lg:col-span-8 lg:p-16">
+						<div class="p-4 md:p-6 lg:col-span-8 lg:p-8">
 							<p class="font-jws text-xs tracking-[0.24em]">{talk.venue.toUpperCase()}</p>
 							<h2
-								class="font-baskervville mt-12 max-w-4xl text-5xl leading-[0.95] tracking-[-0.04em] md:text-7xl xl:text-8xl"
+								class="font-baskervville mt-6 max-w-4xl text-2xl leading-[0.95] tracking-[-0.04em] md:text-4xl xl:text-5xl"
 							>
 								{talk.title}
 							</h2>
 							<div
-								class="font-crimson mt-16 flex flex-wrap items-center justify-between gap-8 border-t border-[#121212]/35 pt-6 text-lg"
+								class="font-crimson mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-[#121212]/35 pt-3 text-sm"
 							>
 								{#if talk.href}
 									<a href={talk.href} target="_blank" rel="noreferrer" class="hover:underline underline-offset-4">
@@ -80,7 +80,7 @@
 								{:else}
 									<p>Details to be announced shortly.</p>
 								{/if}
-								<span aria-hidden="true" class="text-4xl">↗</span>
+								<span aria-hidden="true" class="text-2xl">↗</span>
 							</div>
 						</div>
 					</div>
